@@ -11,7 +11,6 @@ var slideAnimate = angular.module('slideAnimate', [])
 
 
             function init() {
-                console.log($curEl, $curEl.height(), $curEl.css('padding'));
                 $parent.css({
                     'overflow': 'hidden',
                     'height': $curEl.height() + 20
@@ -33,15 +32,12 @@ var slideAnimate = angular.module('slideAnimate', [])
             }
 
             scope.$watch(attrs.slideAnimate, function(value) {
-                console.log('value: ' + value,
-                    'curIndex: ' + curIndex);
                 if (curIndex === undefined) {
                     curIndex = value;
                     $curEl = angular.element($chld[curIndex]);
                     init();
                 }
                 while (value < curIndex) {
-
                         animate('down');
                         curIndex--;
                         $curEl = angular.element($chld[curIndex]);
@@ -49,8 +45,6 @@ var slideAnimate = angular.module('slideAnimate', [])
                 }
 
                 while (value > curIndex) {
-                        console.log('value: ' + value,
-                            'curIndex: ' + curIndex);
                         animate('up');
                         curIndex++;
                         $curEl = angular.element($chld[curIndex]);
