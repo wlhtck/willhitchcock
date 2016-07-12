@@ -1,0 +1,26 @@
+{
+  "name": "williamjhitchcock",
+  "description": "Codebase for williamjhitchcock.com",
+  "main": "",
+  "authors": [
+    "William J Hitchcock"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angular2#^1.5.7",
+    "Materialize": "materialize#^0.97.6",
+    "angular-route": "^1.5.7",
+    "angular-slick-carousel": "^3.1.5",
+    "angular-inview": "^1.5.7",
+    "angular-animate": "^1.5.7"
+  }
+}

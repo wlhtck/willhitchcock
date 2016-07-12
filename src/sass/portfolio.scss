@@ -1,0 +1,28 @@
+.carousel-arrow {
+    padding: 4px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    cursor: pointer;
+    color: $secondary-color;
+    border: 4px solid $secondary-color;
+    border-radius: 50%;
+    &.next {
+        right: -45px;
+    }
+    &.prev {
+        left: -45px;
+    }
+}
+
+.close-icon {
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    color: black;
+    border: 4px solid black;
+    background: rgba(256, 256, 256, 0.9);
+    cursor: pointer;
+}

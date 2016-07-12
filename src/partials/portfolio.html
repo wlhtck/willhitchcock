@@ -1,0 +1,32 @@
+<div class="container valign">
+    <div class="row">
+        <h5 class="section-title">
+        <span>
+            <i class="material-icons left">{{portfolio.icon}}</i>
+            <span class="title-text">{{portfolio.header}}</span>
+        </span>
+    </h5>
+    </div>
+    <div class="row">
+        <slick slides-to-show="3" center-mode="true" settings="slickConfig">
+            <div class="card small" style="margin: 10px;" ng-repeat="item in portfolio.items" ng-click="showContent($index)">
+                <div class="card-image waves-effect waves-light full-width">
+                    <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator">{{item.header}}<i class="material-icons right">more_vert</i></span></span>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+        </slick>
+    </div>
+</div>
+<div class="modal-container" ng-repeat="item in portfolio.items" ng-show="selected === $index" ng-click="hideContent()">
+    <div class="modal-custom" ng-click="hideContent()">
+        <div class="z-depth-4 modal-custom-content" ng-click="$event.stopPropagation()" ng-show="selected === $index">
+            <i class="material-icons close-icon right" ng-click="hideContent()">close</i>
+            <div ng-include="item.partial">{{item.partial}}</div>
+        </div>
+    </div>
+</div>
+<div class="overlay" ng-show="selected > -1"></div>

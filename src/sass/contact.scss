@@ -1,0 +1,13 @@
+.contact {
+    .relative {
+        transition: height 2s;
+    }
+    .form-container {
+        overflow: hidden;
+        transition: top 2s;
+        .form-blocks {
+            padding: 10px;
+            clear: both;
+        }
+    }
+}

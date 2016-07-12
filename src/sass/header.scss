@@ -1,0 +1,45 @@
+.nav-area {
+    position: relative;
+    .bg-backdrop {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/header.png);
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-position: center center;
+        background-size: cover;
+        color: white;
+    }
+    a.active {
+        background-color: rgba(0, 0, 0, 0.1);
+        outline: 0;
+    }
+    .container {
+        position: relative;
+        padding: 2rem;
+    }
+    nav {
+        background-color: $primary-color;
+        position: relative;
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        ul {
+            text-align: center;
+            li {
+                float: none;
+                display: inline;
+            }
+            a {
+                font-size: 1.6rem;
+            }
+            i.material-icons {
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
