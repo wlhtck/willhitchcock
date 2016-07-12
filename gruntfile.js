@@ -59,6 +59,12 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }, {
                     expand: true,
+                    cwd: 'bower_components/font-awesome/fonts',
+                    src: '**/*',
+                    dest: '<%= pkg.dev.app %>/fonts/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
                     cwd: '<%= pkg.src %>/json/',
                     src: '*',
                     dest: '<%= pkg.dev.app %>/json/',

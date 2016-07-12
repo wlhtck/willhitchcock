@@ -1,5 +1,12 @@
-<div class="footer-copyright" ng-controller="FooterCtrl">
-    <div class="container">
-	© {{date | date:'yyyy'}} {{footer.copyright}} This site was proudly build with <a class="white-text" href='https://angularjs.org/'>Angular</a> and <a class="white-text" href='http://materializecss.com/'>Materialize</a>
+<div ng-controller="FooterCtrl">
+    <div class="container center">
+        <a ng-repeat="item in footer.networks" ng-href="{{item.href}}" class="social-links">
+            <i class="white-text fa fa-5x" ng-class="item.icon"></i>
+        </a>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © {{date | date:'yyyy'}} {{footer.copyright}} This site was proudly build with <a class="white-text" href='https://angularjs.org/'>Angular</a> and <a class="white-text" href='http://materializecss.com/'>Materialize</a>
+        </div>
     </div>
 </div>
