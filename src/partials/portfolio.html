@@ -21,9 +21,9 @@
         </slick>
     </div>
 </div>
-<div class="modal-container" ng-repeat="item in portfolio.items" ng-class="(selected === $index) ? 'show' : 'hide'" ng-click="hideContent()">
+<div class="modal-container" ng-repeat="item in portfolio.items" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'" ng-click="hideContent()">
     <div class="modal-custom" ng-click="hideContent()">
-        <div class="z-depth-4 modal-custom-content" ng-click="$event.stopPropagation()" ng-show="selected === $index">
+        <div class="z-depth-4 modal-custom-content" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'" ng-click="$event.stopPropagation()">
             <i class="material-icons close-icon right" ng-click="hideContent()">close</i>
             <div ng-include="item.partial">{{item.partial}}</div>
         </div>
