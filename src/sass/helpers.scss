@@ -8,6 +8,22 @@ main {
     flex: 1 0 auto;
 }
 
+a:focus {
+    outline: none;
+}
+.card .card-image .material-icons {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.activator:hover {
+    cursor: pointer;
+}
+
 .relative {
     position: relative;
 }
