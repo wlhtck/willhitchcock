@@ -53,14 +53,6 @@ pageCtrls
         }
 
         $scope.showContent = function($index) {
-
-            //extremely dirty fix
-            if ($index === 0 && !dirtyFixDone) {
-                dirtyFixDone = true;
-                window.setTimeout(function() {
-                    eval($scope.portfolio.items[$index].init);
-                }, 20);
-            }
             $scope.selected = $index;
         }
 
