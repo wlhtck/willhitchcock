@@ -14,8 +14,8 @@ module.exports = function(grunt) {
             src: 'src/'
         },
         clean: {
-            dev: '<%= pkg.dev.service %>',
-            prod: '<%= pkg.prod.service %>'
+            dev: '<%= pkg.dev.service %>/**/*',
+            prod: '<%= pkg.prod.service %>/**/*'
         },
         concat: {
             dev: {
@@ -93,12 +93,18 @@ module.exports = function(grunt) {
                 }, {
                     expand: true,
                     cwd: '<%= pkg.src %>/img',
-                    src: '**/',
+                    src: '**/*',
                     dest: '<%= pkg.prod.app %>/img/',
                     filter: 'isFile'
                 }, {
                     expand: true,
                     cwd: 'bower_components/Materialize/fonts',
+                    src: '**/*',
+                    dest: '<%= pkg.prod.app %>/fonts/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: 'bower_components/font-awesome/fonts',
                     src: '**/*',
                     dest: '<%= pkg.prod.app %>/fonts/',
                     filter: 'isFile'
@@ -112,7 +118,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'components/dist',
                     src: '**/*',
-                    dest: '<%= pkg.dev.app %>/components/',
+                    dest: '<%= pkg.prod.app %>/components/',
                     filter: 'isFile'
                 }]
             }
@@ -214,12 +220,14 @@ module.exports = function(grunt) {
         express: {
             dev: {
                 options: {
-                    script: '<%= pkg.dev.service %>/index.js'
+                    script: '<%= pkg.dev.service %>/index.js',
+                    node_env: 'development',
+                    port: '8000'
                 }
             },
             prod: {
                 options: {
-                    script: 'path/to/prod/server.js',
+                    script: '<%= pkg.prod.service %>/index.js',
                     node_env: 'production',
                     port: '80'
                 }
@@ -238,7 +246,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-express-server');
 
-    grunt.registerTask('default', ['clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', /*'uglify', /*'connect'*/ 'express:dev', 'watch']);
-    grunt.registerTask('prod', [ /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod', /*'connect'*/ ]);
-    grunt.registerTask('prod-clean', ['clean:prod', /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod', /*'connect'*/ ]);
+    grunt.registerTask('default', ['clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
+    grunt.registerTask('prod', [ /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
+    grunt.registerTask('prod-clean', ['clean:prod', /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod', ]);
 };

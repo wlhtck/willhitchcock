@@ -8,14 +8,14 @@
     </h5>
     </div>
     <div class="row">
-        <slick slides-to-show="3" center-mode="true" settings="slickConfig">
-            <div class="card small" style="margin: 10px;" ng-repeat="item in portfolio.items" ng-click="showContent($index)">
+        <slick slides-to-show="2" center-mode="true" settings="slickConfig">
+            <div class="card hoverable" style="margin: 10px;" ng-repeat="item in portfolio.items" ng-click="showContent($index)">
                 <div class="card-image waves-effect waves-light full-width">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator">{{item.header}}<i class="material-icons right">more_vert</i></span></span>
-                    <p>{{item.description}}</p>
+                    <span class="card-title activator">{{item.header}}<i class="material-icons right">open_in_new</i></span></span>
+                    
                 </div>
             </div>
         </slick>

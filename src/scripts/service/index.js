@@ -1,12 +1,12 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
 var williamJHitchcock = express();
-//default port to 800 for dev
+//default port to 8000 for dev
 var PORT = process.env.PORT || 8000;
 
-
+console.log(__dirname);
 //serve static files
-williamJHitchcock.use(express.static('build/dev/public'));
+williamJHitchcock.use(express.static(__dirname + '/public/'));
 
 //send email
 williamJHitchcock.get('/contact', function(req, res) {
