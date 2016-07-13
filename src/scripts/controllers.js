@@ -32,7 +32,6 @@ pageCtrls
         });
     }])
     .controller('PortfolioCtrl', ['$scope', '$http', function($scope, $http) {
-        dirtyFixDone = false;
         $scope.slickConfig = {
             responsive: [{
                 breakpoint: 992,
