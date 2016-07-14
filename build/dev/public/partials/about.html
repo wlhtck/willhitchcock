@@ -1,0 +1,51 @@
+<div class="container valign">
+    <div class="row">
+        <div class="col s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left">{{about.bio.icon}}</i>
+                    <span class="title-text">{{about.bio.header}}</span>
+                </span>
+            </h5>
+            <p class="flow-text center">{{about.bio.content}}</p>
+        </div>
+        <!--<div class="col m4 s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left">{{about.social.icon}}</i>
+                    <span class="title-text">{{about.social.header}}</span>
+                </span>
+            </h5>
+        </div>-->
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <h5 class="section-title">
+	            <span>
+	                <i class="material-icons left">{{about.philosophy.icon}}</i>
+	                <span class="title-text">{{about.philosophy.header}}</span>
+	            </span>
+	        </h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m4 s12" ng-repeat="item in about.philosophy.content">
+            <div class="card hoverable">
+                <div class="card-image waves-effect waves-light full-width">
+                    <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator">{{item.header}}<i class="material-icons right">more_vert</i></span></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title">
+                        {{item.header}}
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

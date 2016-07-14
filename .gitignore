@@ -24,10 +24,6 @@ bower_components/
 components/
 node_modules/
 
-# Build Directory #
-###################
-build/
-
 # Images #
 ##########
 img/

@@ -1,0 +1,42 @@
+<div class="container valign portfolio">
+    <h5 class="section-title">
+        <span>
+            <i class="material-icons left">{{portfolio.icon}}</i>
+            <span class="title-text">{{portfolio.header}}</span>
+        </span>
+    </h5>
+    <slick slides-to-show="2" center-mode="true" settings="slickConfig">
+        <div class="card hoverable" style="margin: 10px;" ng-repeat="item in portfolio.items">
+            <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
+                <i ng-if="item.partial" class="material-icons">open_in_new</i>
+                <img ng-class="item.href ? 'activator': ''" ng-src="{{item.graphic}}" alt="{{item.alt}}">
+            </div>
+            <div ng-if="item.partial" class="card-content activator">
+                <span class="card-title activator">
+                        {{item.header}}
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+            </div>
+            <div ng-if="item.href" class="card-action activator">
+                <a ng-href="{{item.href}}" target="_blank">{{item.header}}</a>
+                <i class="material-icons right activator">more_vert</i>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title">
+                        {{item.header}}
+                        <i class="material-icons right">close</i>
+                    </span>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </slick>
+</div>
+<div class="modal-container" ng-repeat="item in portfolio.items" ng-if="item.partial" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'" ng-click="hideContent()">
+    <div class="modal-custom" ng-click="hideContent()">
+        <div class="z-depth-4 modal-custom-content" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'" ng-click="$event.stopPropagation()">
+            <i class="material-icons close-icon right" ng-click="hideContent()">close</i>
+            <div ng-include="item.partial">{{item.partial}}</div>
+        </div>
+    </div>
+</div>
+<div class="overlay" ng-show="selected > -1"></div>

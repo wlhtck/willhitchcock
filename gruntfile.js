@@ -120,6 +120,18 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: '<%= pkg.prod.app %>/components/',
                     filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: '',
+                    src: '*.json',
+                    dest: '<%= pkg.prod.service %>/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: '',
+                    src: 'Procfile',
+                    dest: '<%= pkg.prod.service %>/',
+                    filter: 'isFile'
                 }]
             }
         },
