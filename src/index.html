@@ -2,7 +2,7 @@
 
 <head ng-controller="HeadCtrl">
     <meta ng-repeat="item in head.metas" name="{{item.name}}" http-equiv="{{item.httpEquiv}}" content="{{item.content}}" charset="{{item.charset}}">
-    <link ng-repeat="item in head.links" rel="{{item.rel}}" href="{{item.href}}">
+    <link ng-repeat="item in head.links" rel="{{item.rel}}" ng-href="{{item.href}}">
     <title>{{head.title}}</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
