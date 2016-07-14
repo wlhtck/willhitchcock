@@ -66,7 +66,7 @@ module.exports = function(grunt) {
                 }, {
                     expand: true,
                     cwd: '<%= pkg.src %>/json/',
-                    src: '*',
+                    src: '**/*',
                     dest: '<%= pkg.dev.app %>/json/',
                     filter: 'isFile'
                 }, {
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
                 }, {
                     expand: true,
                     cwd: '<%= pkg.src %>/json/',
-                    src: '*',
+                    src: '**/*',
                     dest: '<%= pkg.prod.app %>/json/',
                     filter: 'isFile'
                 }, {
