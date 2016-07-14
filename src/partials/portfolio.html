@@ -8,7 +8,7 @@
     <slick slides-to-show="2" center-mode="true" settings="slickConfig">
         <div class="card hoverable" style="margin: 10px;" ng-repeat="item in portfolio.items">
             <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
-                <i ng-if="item.partial" class="material-icons">open_in_new</i>
+                <!--<i ng-if="item.partial" class="material-icons">open_in_new</i>-->
                 <img ng-class="item.href ? 'activator': ''" ng-src="{{item.graphic}}" alt="{{item.alt}}">
             </div>
             <div ng-if="item.partial" class="card-content activator">
@@ -21,7 +21,7 @@
                 <a ng-href="{{item.href}}" target="_blank">{{item.header}}</a>
                 <i class="material-icons right activator">more_vert</i>
             </div>
-            <div class="card-reveal">
+            <div class="card-reveal flow-text">
                 <span class="card-title">
                         {{item.header}}
                         <i class="material-icons right">close</i>
