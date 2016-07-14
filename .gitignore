@@ -14,6 +14,10 @@
 ehthumbs.db
 Thumbs.db
 
+# Build #
+########
+build/
+
 # Data #
 ########
 *.json
