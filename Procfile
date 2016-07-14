@@ -1,0 +1,1 @@
+web: node build/prod/index.js
