@@ -8,8 +8,8 @@ module.exports = function(grunt) {
                 app: 'build/dev/public'
             },
             prod: {
-                service: 'build/prod',
-                app: 'build/prod/public'
+                service: '../willhitchcock',
+                app: '../willhitchcock/public'
             },
             src: 'src/'
         },
@@ -260,5 +260,4 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
     grunt.registerTask('prod', [ /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
-    grunt.registerTask('prod-clean', ['clean:prod', /*'less'*/ 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod', ]);
 };
