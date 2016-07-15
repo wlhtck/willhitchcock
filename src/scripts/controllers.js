@@ -1,4 +1,4 @@
-var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'ngAnimate', 'slickCarousel', 'angular-inview', 'slideAnimate']);
+var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'ngAnimate', 'slickCarousel', 'angular-inview']);
 
 pageCtrls
     .controller('HeadCtrl', ['$scope', '$http', function($scope, $http) {
@@ -65,6 +65,17 @@ pageCtrls
         });
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
+
+        $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+
+        $('#message').bind('keyup', function() {
+            $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+        });
+
+        $(window).resize(function(){
+            $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+        });
+
         $http.get('json/contact.json').success(function(data) {
             $scope.contact = data;
         });

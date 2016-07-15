@@ -11,6 +11,11 @@ main {
 a:focus {
     outline: none;
 }
+
+.clear {
+    clear: both;
+}
+
 .card .card-image .material-icons {
     z-index: 1;
     color: #fff;
