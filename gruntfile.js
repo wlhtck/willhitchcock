@@ -75,6 +75,12 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: '<%= pkg.dev.app %>/components/',
                     filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: '<%= pkg.src %>/misc',
+                    src: '**/*',
+                    dest: '<%= pkg.dev.app %>/misc/',
+                    filter: 'isFile'
                 }]
             },
             prod: {
@@ -131,6 +137,12 @@ module.exports = function(grunt) {
                     cwd: '',
                     src: 'Procfile',
                     dest: '<%= pkg.prod.service %>/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: '<%= pkg.src %>/misc',
+                    src: '**/*',
+                    dest: '<%= pkg.prod.app %>/misc/',
                     filter: 'isFile'
                 }]
             }
