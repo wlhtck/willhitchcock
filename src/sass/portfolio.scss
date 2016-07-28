@@ -1,18 +1,16 @@
 .portfolio {
     .carousel-arrow {
-        padding: 4px;
         position: absolute;
         top: 50%;
-        margin-top: -10px;
-        cursor: pointer;
-        color: $secondary-color;
-        border: 4px solid $secondary-color;
-        border-radius: 50%;
+        transform: translateY(-50%);
         &.next {
-            right: -45px;
+            right: -65px;
         }
         &.prev {
-            left: -45px;
+            left: -65px;
+        }
+        i {
+            font-size: 2.4rem;
         }
     }
     .slick-slide {

@@ -47,8 +47,8 @@ pageCtrls
                 }
             }],
             enabled: false,
-            prevArrow: '<i class="material-icons carousel-arrow prev">chevron_left</i>',
-            nextArrow: '<i class="material-icons carousel-arrow next">chevron_right</i>'
+            prevArrow: '<a class="btn-floating btn-large waves-effect teal carousel-arrow prev hoverable"><i class="material-icons">chevron_left</i></a>',
+            nextArrow: '<a class="btn-floating btn-large waves-effect teal carousel-arrow next hoverable"><i class="material-icons">chevron_right</i></a>'
         }
 
         $scope.showContent = function($index) {
