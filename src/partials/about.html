@@ -21,16 +21,16 @@
     <div class="row">
         <div class="col s12">
             <h5 class="section-title">
-	            <span>
-	                <i class="material-icons left">{{about.philosophy.icon}}</i>
-	                <span class="title-text">{{about.philosophy.header}}</span>
-	            </span>
-	        </h5>
+                <span>
+                    <i class="material-icons left">{{about.philosophy.icon}}</i>
+                    <span class="title-text">{{about.philosophy.header}}</span>
+                </span>
+            </h5>
         </div>
     </div>
     <div class="row">
         <div class="col m4 s12" ng-repeat="item in about.philosophy.content">
-            <div class="card hoverable">
+            <div class="card hoverable philosophy">
                 <div class="card-image waves-effect waves-light full-width">
                     <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
