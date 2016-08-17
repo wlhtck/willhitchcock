@@ -6,7 +6,7 @@
         </span>
     </h5>
     <slick slides-to-show="2" center-mode="true" settings="slickConfig">
-        <div ng-repeat="item in portfolio.items">
+        <div ng-repeat="item in portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)">
             <div ng-if="item.partial" class="card hoverable" style="margin: 10px;" ng-click="item.partial ? showContent($index) : return">
                 <div class="card-image waves-effect waves-light full-width">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">

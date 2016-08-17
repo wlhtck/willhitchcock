@@ -16,10 +16,12 @@
     .slick-slide {
         height: auto;
     }
-    .portfolio {
-        .slick-list {
-            margin-top: -10px;
+    .slick-list {
+        @media #{$medium-and-up} {
+            overflow: hidden;
         }
+        overflow: visible;
+        margin-top: -10px;
     }
     .card {
         .card-title {
