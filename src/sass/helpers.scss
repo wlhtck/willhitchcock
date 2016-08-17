@@ -6,6 +6,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    overflow: hidden;
 }
 
 a:focus {
@@ -14,6 +15,16 @@ a:focus {
 
 .clear {
     clear: both;
+}
+
+.card-reveal {
+    .valign-wrapper {
+        z-index: -1;
+        height: 100%;
+        position: relative;
+        top: -24px;
+        margin-bottom: -24px;
+    }
 }
 
 .card .card-image .material-icons {
