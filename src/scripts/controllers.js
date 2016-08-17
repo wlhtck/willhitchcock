@@ -8,17 +8,19 @@ pageCtrls
 
 
     }])
-    .controller('HeaderCtrl', ['$scope', '$http', function($scope, $http) {
+    .controller('HeaderCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
         $http.get('json/header.json').success(function(data) {
             $scope.header = data;
         });
 
+        $scope.curPage = '#' + $location.url();
+
+        $scope.$on('$locationChangeSuccess', function() {
+            $scope.curPage = '#' + $location.url();
+        });
+
         $scope.stick = function($inview) {
             $scope.sticky = !$inview;
-        }
-
-        $scope.updateSelected = function(i) {
-            $scope.selectedIndex = i;
         }
     }])
     .controller('AboutCtrl', ['$scope', '$http', function($scope, $http) {
@@ -31,7 +33,23 @@ pageCtrls
             $scope.resume = data;
         });
     }])
-    .controller('PortfolioCtrl', ['$scope', '$http', function($scope, $http) {
+    .controller('PortfolioCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
+        var w = angular.element($window);
+
+        $scope.$watch(
+            function() {
+                return $window.innerWidth;
+            },
+            function(value) {
+                $scope.windowWidth = value;
+            },
+            true
+        );
+
+        w.bind('resize', function() {
+            $scope.$apply();
+        });
+
         $scope.slickConfig = {
             responsive: [{
                 breakpoint: 992,
@@ -43,7 +61,10 @@ pageCtrls
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    arrows: false,
+                    draggable: true
                 }
             }],
             enabled: false,
@@ -66,14 +87,14 @@ pageCtrls
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 
-        $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+        $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
 
         $('#message').bind('keyup', function() {
-            $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
         });
 
-        $(window).resize(function(){
-            $('.contact .relative').css('min-height',$('.form-block:visible').outerHeight(true));
+        $(window).resize(function() {
+            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
         });
 
         $http.get('json/contact.json').success(function(data) {

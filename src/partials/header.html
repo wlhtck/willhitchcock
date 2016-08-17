@@ -5,7 +5,9 @@
         <div class="container" in-view="stick($inview)">
             <div class="row no-margin">
                 <div class="col offset-m4 offset-s3 s6 m4">
-                    <img src="img/profile.png" class="z-depth-2 circle responsive-img bg-primary" />
+                    <a ng-href="{{header.image.href}}">
+                        <img ng-src="{{header.image.url}}" class="z-depth-2 circle responsive-img bg-primary" ng-click="updateSelected(0)" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -13,7 +15,7 @@
     <nav ng-show="sticky"></nav>
     <nav ng-class="sticky ? 'sticky' : ''">
         <ul>
-            <li ng-repeat="item in header"><a href="{{item.href}}" ng-class="selectedIndex === $index ? 'active' : '' +' '+ item.class" ng-click="updateSelected($index)"><i class="material-icons left hide-on-small-only">{{item.icon}}</i><span class="">{{item.name}}</span></a></li>
+            <li ng-repeat="item in header.nav"><a href="{{item.href}}" ng-class="curPage === item.href ? 'active' : '' +' '+ item.class"><i class="material-icons left hide-on-small-only">{{item.icon}}</i><span class="">{{item.name}}</span></a></li>
         </ul>
     </nav>
 </div>
