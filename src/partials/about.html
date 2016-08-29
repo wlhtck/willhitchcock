@@ -31,16 +31,16 @@
     <div class="row">
         <div class="col m4 s12" ng-repeat="item in about.philosophy.content">
             <div class="card hoverable philosophy">
-                <div class="card-image waves-effect waves-light full-width">
-                    <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                <div class="activator hover-activator card-image waves-effect waves-light full-width">
+                    <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator">{{item.header}}<i class="material-icons right">more_vert</i></span></span>
+                    <span class="card-title activator">{{item.header}}<i class="material-icons right hide-on-large-only">more_vert</i></span></span>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title">
                         {{item.header}}
-                        <i class="material-icons right">close</i>
+                        <i class="material-icons right hide-on-large-only">close</i>
                     </span>
                     <div class="valign-wrapper">
                         <p class="valign">{{item.description}}</p>

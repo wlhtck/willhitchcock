@@ -7,24 +7,36 @@
     </h5>
     <slick slides-to-show="2" center-mode="true" settings="slickConfig">
         <div ng-repeat="item in portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)">
-            <div ng-if="item.partial" class="card hoverable" style="margin: 10px;" ng-click="item.partial ? showContent($index) : return">
+            <div ng-if="item.partial" class="card hoverable clickable" style="margin: 10px;" ng-click="item.partial ? showContent($index) : return">
                 <div class="card-image waves-effect waves-light full-width">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
                     <span class="card-title">{{item.header}}</span>
                 </div>
-            </div>
-            <div ng-if="item.href" class="card hoverable" style="margin: 10px;">
-                <a ng-href="{{item.href}}" target="_blank">
-                    <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
-                        <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                <div class="card-reveal">
+                    <span class="card-title">
+                        {{item.header}}
+                    </span>
+                    <div class="valign-wrapper">
+                        <p class="valign">{{item.description}}</p>
                     </div>
-                    <div class="card-action">
-                        <span class="card-title">{{item.header}}<i class="material-icons right">open_in_new</i></span>
-                    </div>
-                </a>
+                </div>
             </div>
+            <a ng-if="item.href" class="card hoverable" style="margin: 10px;" ng-href="{{item.href}}" target="_blank">
+                <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
+                    <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{item.header}}<i class="material-icons right">open_in_new</i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title">{{item.header}}<i class="material-icons right">open_in_new</i></span>
+                    <div class="valign-wrapper">
+                        <p class="valign">{{item.description}}</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </slick>
 </div>
