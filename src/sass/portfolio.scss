@@ -20,6 +20,9 @@
         @media #{$medium-and-up} {
             overflow: hidden;
         }
+        a {
+            display: block;
+        }
         overflow: visible;
         margin-top: -10px;
     }
