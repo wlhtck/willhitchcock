@@ -12,6 +12,9 @@ main {
 a:focus {
     outline: none;
 }
+.clickable {
+    cursor: pointer;
+}
 
 .clear {
     clear: both;
