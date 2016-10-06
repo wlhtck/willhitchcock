@@ -9,12 +9,12 @@
             </h5>
             <div class="card hoverable" ng-repeat="item in resume.experience.list">
                 <div class="hover-activator activator card-image waves-effect waves-light full-width">
-                    <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                    <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
                     <div class="row no-margin valign-wrapper">
                         <div class="col m3 hide-on-small-only">
-                            <img class="activator" ng-src="{{item.logo}}" alt="" class="center-block responsive-img circle">
+                            <img ng-src="{{item.logo}}" alt="" class="center-block responsive-img circle">
                         </div>
                         <div class="col m9 s12 valign">
                             <div class="card-title">
