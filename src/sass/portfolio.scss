@@ -15,6 +15,7 @@
     }
     .slick-slide {
         height: auto;
+        outline: none;
     }
     .slick-list {
         @media #{$medium-and-up} {
