@@ -1,5 +1,19 @@
 <div class="container resume">
     <div class="row">
+        <div class="col s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left ng-binding">{{resume.download.icon}}</i>
+                    <span class="title-text ng-binding">{{resume.download.header}}</span>
+                </span>
+            </h5>
+            <p class="flow-text center">{{resume.download.text}}</p>
+            <div class="center-align">
+                <a class="waves-effect waves-light btn" target="_blank" ng-href="{{resume.download.href}}" ><i class="material-icons left">file_download</i>Download</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col m8 s12">
             <h5 class="section-title">
                 <span>
@@ -59,10 +73,5 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-        <a class="btn-floating btn-large" target="_blank" ng-href="{{resume.download}}">
-            <i class="large material-icons">file_download</i>
-        </a>
     </div>
 </div>
