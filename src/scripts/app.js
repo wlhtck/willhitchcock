@@ -1,6 +1,6 @@
-var williamJHitchcock = angular.module('williamJHitchcock', ['ngRoute', 'pageCtrl']);
+var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl']);
 
-williamJHitchcock.config(['$routeProvider', function($routeProvider) {
+willHitchcock.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/resume', {
 			templateUrl: 'partials/resume.html',

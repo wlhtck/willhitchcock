@@ -1,9 +1,14 @@
-<html lang="en" ng-app="williamJHitchcock">
+<html lang="en" ng-app="willHitchcock">
 
 <head ng-controller="HeadCtrl">
     <meta ng-repeat="item in head.metas" name="{{item.name}}" http-equiv="{{item.httpEquiv}}" content="{{item.content}}" charset="{{item.charset}}">
     <link ng-repeat="item in head.links" rel="{{item.rel}}" ng-href="{{item.href}}">
-    <title>{{head.title}}</title>
+    <title>Will Hitchcock</title>
+
+    <meta property="og:title" content="Will Hitchcock" />
+	<meta property="og:url" content="http://www.willhitchcock.me" />
+	<meta property="og:image" content="/img/profile.png" />
+
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
