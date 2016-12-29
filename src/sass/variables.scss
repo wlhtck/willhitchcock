@@ -37,6 +37,7 @@ $primary-color: color("light-blue", "base");
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
 $white: #fff;
+$black: #000;
 
 $secondary-color: color("teal", "base");
 $success-color: color("green", "base");
