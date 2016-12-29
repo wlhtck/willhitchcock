@@ -50,28 +50,6 @@ pageCtrls
             $scope.$apply();
         });
 
-        $scope.slickConfig = {
-            responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }, {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    arrows: false,
-                    draggable: true
-                }
-            }],
-            enabled: false,
-            prevArrow: '<a class="btn-floating btn-large waves-effect teal carousel-arrow prev hoverable"><i class="material-icons">chevron_left</i></a>',
-            nextArrow: '<a class="btn-floating btn-large waves-effect teal carousel-arrow next hoverable"><i class="material-icons">chevron_right</i></a>'
-        }
-
         $scope.showContent = function($index) {
             $scope.selected = $index;
         }
@@ -82,7 +60,6 @@ pageCtrls
 
         $http.get('json/portfolio.json').success(function(data) {
             $scope.portfolio = data;
-            $scope.slickConfig.enabled = true;
         });
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
