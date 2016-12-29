@@ -7,8 +7,10 @@
     </h5>
     <div class="row">
         
-        <div ng-repeat="item in portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)" class="col m4 s12">
-            <div ng-if="item.partial" class="card hoverable clickable" style="margin: 10px;" ng-click="item.partial ? showContent($index) : return">
+        <div ng-repeat="item in portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)" class="col m3 s12">
+
+            <!--modal portfolio item-->
+            <div ng-if="item.partial" class="card hoverable clickable" ng-click="item.partial ? showContent($index) : return">
                 <div class="card-image waves-effect waves-light full-width">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
@@ -24,12 +26,15 @@
                     </div>
                 </div>
             </div>
-            <a ng-if="item.href" class="card hoverable" style="margin: 10px;" ng-href="{{item.href}}" target="_blank">
+            
+            <!--external portfolio item-->
+            <a ng-if="item.href" class="card hoverable" ng-href="{{item.href}}" target="_blank">
                 <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title">{{item.header}}<i class="material-icons right">open_in_new</i></span>
+                    <span class="card-title">{{item.header}}</span>
+                    <i class="material-icons">open_in_new</i>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title">{{item.header}}<i class="material-icons right">open_in_new</i></span>

@@ -1,37 +1,34 @@
 .portfolio {
-    .carousel-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        &.next {
-            right: -65px;
-        }
-        &.prev {
-            left: -65px;
-        }
-        i {
-            font-size: 2.4rem;
-        }
-    }
-    .slick-slide {
-        height: auto;
-        outline: none;
-    }
-    .slick-list {
-        @media #{$medium-and-up} {
-            overflow: hidden;
-        }
-        a {
-            display: block;
-        }
-        overflow: visible;
-        margin-top: -10px;
-    }
     .card {
         display: block;
         .card-title {
             line-height: 100%;
+            font-size: 20px;
             color: initial;
+            white-space: nowrap;
+            position: relative;
+            display: block;
+            &:after {
+                display: block;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                top: 0px;
+                width: 30px;
+                content: "";
+                background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+            }
         }
+        .material-icons {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 20px;
+            color: $black;
+        }
+    }
+    a.card .card-title {
+        margin-right: 30px;
+        overflow: hidden;
     }
 }
