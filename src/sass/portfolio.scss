@@ -2,19 +2,20 @@
     .card {
         display: block;
         .card-title {
-            line-height: 100%;
+            line-height: 1.2;
             font-size: 20px;
             color: initial;
             white-space: nowrap;
             position: relative;
             display: block;
+            overflow: hidden;
             &:after {
                 display: block;
                 position: absolute;
-                right: 0px;
-                bottom: 0px;
-                top: 0px;
-                width: 30px;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                width: 40px;
                 content: "";
                 background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
             }
@@ -28,7 +29,6 @@
         }
     }
     a.card .card-title {
-        margin-right: 30px;
-        overflow: hidden;
+        margin-right: 20px;
     }
 }
