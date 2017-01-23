@@ -10,13 +10,13 @@ willHitchcock.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'partials/contact.html',
 			controller: 'ContactCtrl'
 		})
-		.when('/portfolio', {
-			templateUrl: 'partials/portfolio.html',
-			controller: 'PortfolioCtrl'
-		})
-		.when('/', {
+		.when('/bio', {
 			templateUrl: 'partials/about.html',
 			controller: 'AboutCtrl'
+		})
+		.when('/', {
+			templateUrl: 'partials/portfolio.html',
+			controller: 'PortfolioCtrl'
 		})
 		.otherwise({
 			redirectTo: '/'
