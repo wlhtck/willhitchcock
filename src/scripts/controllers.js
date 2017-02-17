@@ -64,10 +64,12 @@ pageCtrls
             $scope.visible += 8;
         }
 
+        $scope.showAll = function() {
+            $scope.visible = $scope.portfolio.portfolio.items.length;
+        }
+
         $http.get('json/portfolio.json').success(function(data) {
             $scope.portfolio = data;
-
-            console.log($scope.portfolio);
         });
 
 
