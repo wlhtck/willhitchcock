@@ -21,10 +21,9 @@
             </h5>
         </div>
         
-        <div ng-repeat="item in portfolio.portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992) && ($index <= 7)" class="col m3 s12">
-
+        <div ng-repeat="item in portfolio.portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)" class="col m3 s12" >
             <!--modal portfolio item-->
-            <div ng-if="item.partial" class="card hoverable clickable" ng-click="item.partial ? showContent($index) : return">
+            <div ng-if="item.partial" class="card hoverable clickable" ng-click="item.partial ? showContent($index) : return" ng-class="($index < visible) ? 'item-show' : 'item-hide'">
                 <div class="card-image waves-effect waves-light full-width">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
@@ -42,7 +41,7 @@
             </div>
             
             <!--external portfolio item-->
-            <a ng-if="item.href" class="card hoverable" ng-href="{{item.href}}" target="_blank">
+            <a ng-if="item.href" class="card hoverable" ng-href="{{item.href}}" target="_blank" ng-class="($index < visible) ? 'item-show' : 'item-hide'">
                 <div class="card-image waves-effect waves-light full-width" ng-click="item.partial ? showContent($index) : return">
                     <img ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
@@ -59,9 +58,12 @@
             </a>
         </div>
     </div>
+    <div class="center-align">
+        <span class="waves-effect waves-light btn" ng-click="showMore();" ng-class="(visible < portfolio.portfolio.items.length) ? '' : 'hide'" >Load More<i class="material-icons right">expand_more</i></span>
+    </div>
 
 </div>
-<div class="modal-container" ng-repeat="item in portfolio.portfolio.items" ng-if="item.partial && ($index <= 7)" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'">
+<div class="modal-container" ng-repeat="item in portfolio.portfolio.items" ng-if="item.partial" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'">
     <div class="modal-custom">
         <div class="z-depth-4 modal-custom-content" ng-class="(selected === $index) ? 'modal-show' : 'modal-hide'" ng-click="$event.stopPropagation()">
             <i class="material-icons close-icon right" ng-click="hideContent()">close</i>

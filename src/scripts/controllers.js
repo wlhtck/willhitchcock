@@ -35,6 +35,8 @@ pageCtrls
     }])
     .controller('PortfolioCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
         var w = angular.element($window);
+        
+        $scope.visible = 8;
 
         $scope.$watch(
             function() {
@@ -58,9 +60,17 @@ pageCtrls
             $scope.selected = -1;
         }
 
+        $scope.showMore = function() {
+            $scope.visible += 8;
+        }
+
         $http.get('json/portfolio.json').success(function(data) {
             $scope.portfolio = data;
+
+            console.log($scope.portfolio);
         });
+
+
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 

@@ -1,6 +1,16 @@
 .portfolio {
     .card {
         display: block;
+        transition: max-height ease .5s;
+        max-height: 100vh;
+        overflow: hidden;
+
+        &.item-show {
+        }
+        &.item-hide {
+            max-height: 0px;
+            margin: 0;
+        }
         .card-title {
             line-height: 1.2;
             font-size: 20px;
