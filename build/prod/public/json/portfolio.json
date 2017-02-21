@@ -1,0 +1,59 @@
+{
+    "bio": {
+        "header": "About Me",
+        "icon": "face",
+        "content": "Hey, I'm Will, I make things for the web and I drink a lot of coffee. I also spend a lot of time riding a bike and playing video games. Don't be shy, have a look around!"
+    },
+    "portfolio": {
+        "header": "Portfolio",
+        "icon": "folder",
+        "moreButton": "View All",
+        "items": [{
+            "graphic": "img/graphics/terrain-graphic.jpg",
+            "header": "Terrain Colorizer",
+            "partial":"components/terrain-colorizer/index.html",
+            "hiddenSmall":"true",
+            "class":"hide-on-med-and-down"
+        }, {
+            "graphic": "img/graphics/ab-graphic.jpg",
+            "header": "Anheuser-Busch",
+            "href":"http://www.anheuser-busch.com/"
+        }, {
+            "graphic": "img/graphics/mcd-graphic.jpg",
+            "header": "McCrea Deezer",
+            "href":"http://www.mccreadeezer.com/"
+        }, {
+            "graphic": "img/graphics/football-graphic.jpg",
+            "header": "Chevy FC",
+            "href":"http://chevyfc.com/"
+        }, {
+            "graphic": "img/graphics/traction-graphic.jpg",
+            "header": "Acadia Traction",
+            "partial":"components/acadia-traction/index.html",
+            "hiddenSmall":"true",
+            "class":"hide-on-med-and-down"
+        }, {
+            "graphic": "img/graphics/trailering-graphic.jpg",
+            "header": "Trailering Guide",
+            "partial":"components/trailering-guide/index.html",
+            "hiddenSmall":"true",
+            "class":"hide-on-med-and-down"
+        }, {
+            "graphic": "img/graphics/coke-graphic.jpg",
+            "header": "Coke Journey",
+            "href":"http://www.thecoca-colacompany.com/"
+        }, {
+            "graphic": "img/graphics/acadia-graphic.jpg",
+            "header": "Acadia Reveal",
+            "partial":"components/acadia-reveal-exterior/index.html",
+            "hiddenSmall":"true",
+            "class":"hide-on-med-and-down"
+        }, {
+            "graphic": "img/graphics/spark-graphic.jpg",
+            "header": "Spark Colorizer",
+            "partial":"components/spark-colorizer/index.html",
+            "hiddenSmall":"true",
+            "class":"hide-on-med-and-down"
+        }]
+    }
+}
