@@ -265,5 +265,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-express-server');
 
     grunt.registerTask('default', ['clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
-    grunt.registerTask('prod', [ /*'less'*/'clean:dev', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
+    grunt.registerTask('prod', [ /*'less'*/'clean:prod', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
 };
