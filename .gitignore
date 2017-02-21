@@ -20,7 +20,7 @@ build/dev/
 
 # Data #
 ########
-src/json
+/src/json
 
 # Components #
 ##############
@@ -30,8 +30,8 @@ node_modules/
 
 # Images #
 ##########
-img/
+/src/img/
 
 # Miscellaneous #
 ##########
-misc/
+/src/misc/
