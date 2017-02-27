@@ -21,6 +21,5 @@ build/
 # Components #
 ##############
 bower_components/
-components/src/
 escalade-seat-config/
 node_modules/
