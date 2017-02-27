@@ -1,0 +1,68 @@
+<div class="container contact">
+    <h5 class="section-title">
+        <span>
+            <i class="material-icons left">{{contact.icon}}</i>
+            <span class="title-text">{{contact.header}} </span>
+        </span>
+    </h5>
+    <div class="relative">
+        <div class="card-panel form-block" ng-show="!contactForm.$submitted">
+            <form name="contactForm" ng-submit="contactForm.$valid ? sendEmail() : contactForm.$submitted = false" novalidate>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">person</i>
+                    <input id="name" name="name" type="text" ng-required="true" ng-model="msg.name">
+                    <label for="name" data-error="Please enter your name">Name</label>
+                    <p class="error-msg" ng-show="contactForm.name.$invalid && contactForm.name.$touched"><i class="material-icons">error</i> Please enter your name</p>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" ng-required="true" ng-validate="true" ng-model="msg.email">
+                    <label for="email" data-error="Please enter a valid email address">Email</label>
+                    <p class="error-msg" ng-show="contactForm.email.$invalid && contactForm.email.$touched"><i class="material-icons">error</i> Please enter a valid email address</p>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">subject</i>
+                    <input id="subject" name="subject" ng-required="true" type="text" ng-model="msg.subject">
+                    <label for="subject" data-error="Please enter a subject">Subject</label>
+                    <p class="error-msg" ng-show="contactForm.subject.$invalid && contactForm.subject.$touched"><i class="material-icons">error</i> Please enter a subject</p>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="message" name="message" type="text" class="materialize-textarea" ng-required="true" ng-model="msg.message"></textarea>
+                    <label for="message" data-error="Please enter a subject">Message</label>
+                    <p class="error-msg" ng-show="contactForm.message.$invalid && contactForm.message.$touched"><i class="material-icons">error</i> Please enter a message</p>
+                </div>
+                <button ng-class="contactForm.$invalid ? 'disabled' : ''" class="btn waves-effect waves-light right" type="submit">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="center card-panel form-block" ng-show="contactForm.$submitted && !response">
+            <div class="preloader-wrapper huge active">
+                <div class="spinner-layer">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-align">
+                &nbsp;
+                <h5 class="color-secondary"><span>Sending...</span></h5>
+            </div>
+        </div>
+        <div class="center card-panel form-block" ng-class="'color-' + response.status" ng-show="response">
+            <i class="material-icons large">{{response.icon}}</i>
+            <div class="center-align">
+                &nbsp;
+                <h5><span>{{response.message}}</span></h5>
+            </div>
+        </div>
+    </div>
+</div>

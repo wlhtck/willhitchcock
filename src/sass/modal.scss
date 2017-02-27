@@ -9,7 +9,9 @@
     opacity: .8;
     transition: all ease 0.5s;
     &.ng-hide {
+        display: block !important;
         opacity: 0;
+        z-index: -1;
     }
 }
 

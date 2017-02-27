@@ -16,22 +16,22 @@ Thumbs.db
 
 # Build #
 ########
-build/
+build/dev/
 
 # Data #
 ########
-*.json
+/src/json
 
 # Components #
 ##############
 bower_components/
-components/
+/components/
 node_modules/
 
 # Images #
 ##########
-img/
+/src/img/
 
 # Miscellaneous #
 ##########
-misc/
+/src/misc/

@@ -33,7 +33,7 @@ pageCtrls
             $scope.resume = data;
         });
     }])
-    .controller('PortfolioCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
+    .controller('PortfolioCtrl', ['$scope', '$http', '$window', '$rootScope', function($scope, $http, $window, $rootScope) {
         var w = angular.element($window);
         
         $scope.visible = 8;
@@ -54,10 +54,12 @@ pageCtrls
 
         $scope.showContent = function($index) {
             $scope.selected = $index;
+            $rootScope.noScroll = 'no-scroll';
         }
 
         $scope.hideContent = function() {
             $scope.selected = -1;
+            $rootScope.noScroll = '';
         }
 
         $scope.showMore = function() {
