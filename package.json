@@ -25,6 +25,10 @@
   "main": "/build/prod/service/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "grunt prod"
+    "postinstall": "grunt prod",
+    "start": "node build/prod/index.js"
+  },
+  "engines": {
+    "node": "4.4.7"
   }
 }
