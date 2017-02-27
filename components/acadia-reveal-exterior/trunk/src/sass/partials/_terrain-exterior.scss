@@ -1,0 +1,96 @@
+#terrain-exterior-clipped { 
+
+    width: 732px;
+    height: 412px;
+    position: relative;
+
+    /* Font-styles from gmc */
+    font-family: Stratum,Arial,sans-serif;
+    color: #5d5d5d;
+
+    .nav {
+        color: rgba(255, 255, 255, 0.502);
+        font-size: 11.725px;
+        position:absolute;
+        bottom:0;
+        z-index: 5;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .nav:hover, .nav.active {
+        color: white;
+        border-bottom: 2px solid red;
+    }
+
+    #nav2 {
+        right: 50%
+    }
+
+    #nav3 {
+        right:0;
+    }
+
+    .ext-slide {
+        position: absolute;
+        overflow: hidden;
+        width: 732px;
+        height: 412px;
+    }
+
+    #wrapper1 {
+        z-index: 3;
+        position: relative;
+    }
+
+    #wrapper2 {
+        z-index: 2;
+        position: relative;
+        top: -100%;
+    }
+
+    #wrapper3 {
+        z-index: 1;
+        position: relative;
+        top: -200%;
+    }
+
+    #slide1 {
+        background: url(../img/Acadia_SLT.jpg) no-repeat 0 0;
+        z-index: 3;
+    }
+
+    #slide2 {
+        background: url(../img/Acadia_Denali.jpg) no-repeat 0 0;
+        z-index: 2;
+    }
+
+    #slide3 {
+        background: url(../img/Acadia_All_Terrain.jpg) no-repeat 0 0;
+        z-index: 1;
+    }    
+
+    .slider-handle {
+
+        z-index: 4;
+        position: absolute;
+        width: 100%;
+
+        .handle {
+            z-index: 6;
+            background: url(../img/slider-handle.png) no-repeat 0 0;
+            width: 39px;
+            height: 39px;
+            display: block;
+            cursor: pointer;
+        }
+    }
+    
+    #slider-handle1 {
+        top: 10%;
+    }
+ 
+    #slider-handle2 {
+       bottom:10%;
+    }
+}
