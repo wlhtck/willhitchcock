@@ -1,96 +1,62 @@
-/* line 1, ../sass/partials/_terrain-exterior.scss */
 #terrain-exterior-clipped {
   width: 732px;
   height: 412px;
   position: relative;
   /* Font-styles from gmc */
   font-family: Stratum,Arial,sans-serif;
-  color: #5d5d5d;
-}
-/* line 11, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped .nav {
-  color: rgba(255, 255, 255, 0.502);
-  font-size: 11.725px;
-  position: absolute;
-  bottom: 0;
-  z-index: 5;
-  margin: 10px;
-  cursor: pointer;
-}
-/* line 21, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped .nav:hover, #terrain-exterior-clipped .nav.active {
-  color: white;
-  border-bottom: 2px solid red;
-}
-/* line 26, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #nav2 {
-  right: 50%;
-}
-/* line 30, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #nav3 {
-  right: 0;
-}
-/* line 34, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped .ext-slide {
-  position: absolute;
-  overflow: hidden;
-  width: 732px;
-  height: 412px;
-}
-/* line 41, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #wrapper1 {
-  z-index: 3;
-  position: relative;
-}
-/* line 46, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #wrapper2 {
-  z-index: 2;
-  position: relative;
-  top: -100%;
-}
-/* line 52, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #wrapper3 {
-  z-index: 1;
-  position: relative;
-  top: -200%;
-}
-/* line 58, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #slide1 {
-  background: url(../img/Acadia_SLT.jpg) no-repeat 0 0;
-  z-index: 3;
-}
-/* line 63, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #slide2 {
-  background: url(../img/Acadia_Denali.jpg) no-repeat 0 0;
-  z-index: 2;
-}
-/* line 68, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #slide3 {
-  background: url(../img/Acadia_All_Terrain.jpg) no-repeat 0 0;
-  z-index: 1;
-}
-/* line 73, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped .slider-handle {
-  z-index: 4;
-  position: absolute;
-  width: 100%;
-}
-/* line 79, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped .slider-handle .handle {
-  z-index: 6;
-  background: url(../img/slider-handle.png) no-repeat 0 0;
-  width: 39px;
-  height: 39px;
-  display: block;
-  cursor: pointer;
-}
-/* line 89, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #slider-handle1 {
-  top: 10%;
-}
-/* line 93, ../sass/partials/_terrain-exterior.scss */
-#terrain-exterior-clipped #slider-handle2 {
-  bottom: 10%;
-}
-
-/*# sourceMappingURL=terrain-exterior.css.map */
+  color: #5d5d5d; }
+  #terrain-exterior-clipped .nav {
+    color: rgba(255, 255, 255, 0.502);
+    font-size: 11.725px;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    margin: 10px;
+    cursor: pointer; }
+  #terrain-exterior-clipped .nav:hover, #terrain-exterior-clipped .nav.active {
+    color: white;
+    border-bottom: 2px solid red; }
+  #terrain-exterior-clipped #nav2 {
+    right: 50%; }
+  #terrain-exterior-clipped #nav3 {
+    right: 0; }
+  #terrain-exterior-clipped .ext-slide {
+    position: absolute;
+    overflow: hidden;
+    width: 732px;
+    height: 412px; }
+  #terrain-exterior-clipped #wrapper1 {
+    z-index: 3;
+    position: relative; }
+  #terrain-exterior-clipped #wrapper2 {
+    z-index: 2;
+    position: relative;
+    top: -100%; }
+  #terrain-exterior-clipped #wrapper3 {
+    z-index: 1;
+    position: relative;
+    top: -200%; }
+  #terrain-exterior-clipped #slide1 {
+    background: url(../img/Acadia_SLT.jpg) no-repeat 0 0;
+    z-index: 3; }
+  #terrain-exterior-clipped #slide2 {
+    background: url(../img/Acadia_Denali.jpg) no-repeat 0 0;
+    z-index: 2; }
+  #terrain-exterior-clipped #slide3 {
+    background: url(../img/Acadia_All_Terrain.jpg) no-repeat 0 0;
+    z-index: 1; }
+  #terrain-exterior-clipped .slider-handle {
+    z-index: 4;
+    position: absolute;
+    width: 100%; }
+    #terrain-exterior-clipped .slider-handle .handle {
+      z-index: 6;
+      background: url(../img/slider-handle.png) no-repeat 0 0;
+      width: 39px;
+      height: 39px;
+      display: block;
+      cursor: pointer; }
+  #terrain-exterior-clipped #slider-handle1 {
+    top: 10%; }
+  #terrain-exterior-clipped #slider-handle2 {
+    bottom: 10%; }
