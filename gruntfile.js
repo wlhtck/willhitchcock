@@ -71,10 +71,13 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }, {
                     expand: true,
-                    cwd: 'components/dist',
-                    src: '**/*',
+                    cwd: 'components',
+                    src: '*/trunk/build/**/*',
                     dest: '<%= pkg.dev.app %>/components/',
-                    filter: 'isFile'
+                    filter: 'isFile',
+                    rename: function(dest, src) {
+                      return dest + src.replace(/trunk\/build\//g, "");
+                    }
                 }, {
                     expand: true,
                     cwd: '<%= pkg.src %>/misc',
@@ -122,10 +125,13 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }, {
                     expand: true,
-                    cwd: 'components/dist',
-                    src: '**/*',
+                    cwd: 'components',
+                    src: '*/trunk/build/**/*',
                     dest: '<%= pkg.prod.app %>/components/',
-                    filter: 'isFile'
+                    filter: 'isFile',
+                    rename: function(dest, src) {
+                      return dest + src.replace(/trunk\/build\//g, "");
+                    }
                 }, {
                     expand: true,
                     cwd: '',
@@ -192,19 +198,13 @@ module.exports = function(grunt) {
         //        }
         //    }
         //},
-        //connect: {
-        //    server: {
-        //        options: {
-        //            hostname: 'localhost',
-        //            port: 8080,
-        //            base: '<%= pkg.dev.app %>',
-        //            livereload: true
-        //        }
-        //    }
-        //},
         watch: {
             options: {
                 livereload: true
+            },
+            hub: {
+                files: 'components/**/trunk/src/**/*',
+                tasks: ['hub']
             },
             scripts: {
                 files: '<%= pkg.src %>/scripts/**/*.js',
@@ -219,7 +219,7 @@ module.exports = function(grunt) {
             //    tasks: ['less:dev']
             //},
             copy: {
-                files: ['<%= pkg.src %>/*.html', '<%= pkg.src %>/img/**/*', '<%= pkg.src %>/json/*', '<%= pkg.src %>/partials/**/*', 'components/dist/**/*'],
+                files: ['<%= pkg.src %>/*.html', '<%= pkg.src %>/img/**/*', '<%= pkg.src %>/json/*', '<%= pkg.src %>/partials/**/*', 'components/**/trunk/build/**/*'],
                 tasks: ['copy:dev']
             },
             bower: {
@@ -233,6 +233,16 @@ module.exports = function(grunt) {
                     spawn: false,
                     livereload:true
                 }
+            }
+        },
+        hub: {
+            all: {
+              src: ['components/*/Gruntfile.js'],
+              tasks: ['default']
+            },
+            clean: {
+              src: ['components/*/Gruntfile.js'],
+              tasks: ['clean']
             }
         },
         express: {
@@ -263,7 +273,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-express-server');
+    grunt.loadNpmTasks('grunt-express-server');
+    grunt.loadNpmTasks('grunt-hub');
 
-    grunt.registerTask('default', ['clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
-    grunt.registerTask('prod', [ /*'less'*/'clean:prod', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
+    grunt.registerTask('default', ['hub:all', 'clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
+    grunt.registerTask('prod', ['hub:all', /*'less'*/ 'clean:prod', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
 };
