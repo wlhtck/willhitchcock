@@ -1,0 +1,17 @@
+{
+  "name": "willhitchcock",
+  "description": "Codebase for www.willhitchcock.me",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
