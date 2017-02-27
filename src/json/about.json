@@ -1,0 +1,28 @@
+{
+    "bio": {
+        "header": "About Me",
+        "icon": "face",
+        "content": "Hey, I'm Will, I run, I bike, and I create beautiful web experiences. Don't be shy, have a look around!"
+    },
+    "social": {
+        "header": "Social",
+        "icon": "people"
+    },
+    "philosophy": {
+        "header": "My Philosophy",
+        "icon": "lightbulb_outline",
+        "content": [{
+            "graphic": "img/graphics/simplicity-graphic.jpg",
+            "header": "Simplicity",
+            "description": "The most elegant solutions are those that are the easiest to understand, have the simplest implementation. With this in mind that I strive to create the most simplistic solutions to any problem."
+        }, {
+            "graphic": "img/graphics/reusability-graphic.jpg",
+            "header": "Reusability",
+            "description": "A working solution is not necessarily a good one. Solutions shuld be contained and modular making them reusable. This approach of thinking allow for quick solutions to new problems."
+        }, {
+            "graphic": "img/graphics/delivery-graphic.jpg",
+            "header": "Delivery",
+            "description": "Despite other considerations, it actually doesn't count if you don't deliver. Therefore I also have a strong belief in delivering quality work within the bounds of any given project."
+        }]
+    }
+}

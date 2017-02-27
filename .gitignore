@@ -18,10 +18,6 @@ Thumbs.db
 ########
 build/
 
-# Data #
-########
-/src/json
-
 # Components #
 ##############
 bower_components/
