@@ -4,13 +4,12 @@
   "description": "Codebase for williamjhitchcock.com",
   "author": "William J Hitchcock",
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "express": "^4.14.0",
-    "nodemailer": "^2.4.2",
     "grunt": "^1.0.1",
     "grunt-bower-concat": "^1.0.0",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
@@ -20,7 +19,8 @@
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-express-server": "^0.5.3",
-    "grunt-sass": "^1.2.0"
+    "grunt-sass": "^1.2.0",
+    "nodemailer": "^2.4.2"
   },
   "main": "/build/prod/service/index.js",
   "scripts": {
