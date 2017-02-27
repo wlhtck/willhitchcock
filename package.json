@@ -1,29 +1,38 @@
 {
-  "name": "williamjhitchcock",
-  "version": "0.1.0",
-  "description": "Codebase for williamjhitchcock.com",
+  "name": "willhitchcock",
+  "version": "1.0.0",
+  "repository": "https://github.com/will-hitchcock/willhitchcock-src.git",
+  "description": "Codebase for www.willhitchcock.com",
   "author": "William J Hitchcock",
   "license": "MIT",
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-bower-concat": "^1.0.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-less": "^1.3.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-express-server": "^0.5.3",
-    "grunt-sass": "^1.2.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "express": "^4.14.0",
-    "nodemailer": "^2.4.2"
+    "bower": "1.8.0",
+    "express": "4.14.0",
+    "grunt": "1.0.1",
+    "grunt-bower-concat": "1.0.0",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-connect": "1.0.2",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "1.0.1",
+    "grunt-contrib-less": "1.3.0",
+    "grunt-contrib-sass": "1.0.0",
+    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-express-server": "0.5.3",
+    "grunt-hub": "0.7.0",
+    "grunt-processhtml": "0.4.1",
+    "grunt-sass": "1.2.0",
+    "nodemailer": "2.4.2"
   },
   "main": "/build/prod/service/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt prod"
+  },
+  "engines": {
+    "node": "4.4.7"
   }
 }

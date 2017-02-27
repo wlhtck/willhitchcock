@@ -1,0 +1,432 @@
+/* 
+######### Stratum Family #########
+*/
+@font-face {
+  font-family: 'Stratum';
+  src: url("../fonts/StratumGMCWebRegular.eot");
+  src: url("../fonts/StratumGMCWebRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/StratumGMCWebRegular.woff") format("woff"), url("../fonts/StratumGMCWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stratum';
+  src: url("../fonts/StratumGMCWebBold.eot");
+  src: url("../fonts/StratumGMCWebBold.eot?#iefix") format("embedded-opentype"), url("../fonts/StratumGMCWebBold.woff") format("woff"), url("../fonts/StratumGMCWeb-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stratum';
+  src: url("../fonts/StratumGMCWebMedium.eot");
+  src: url("../fonts/StratumGMCWebMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/StratumGMCWebMedium.woff") format("woff"), url("../fonts/StratumGMCWeb-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/* line 1, ../sass/partials/_component.scss */
+#content {
+  width: 100%;
+  height: 100%;
+}
+/* line 5, ../sass/partials/_component.scss */
+#content iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 10, ../sass/partials/_component.scss */
+#content .juneBug {
+  position: absolute;
+  top: 10%;
+  bottom: 0px;
+}
+
+/* line 18, ../sass/partials/_component.scss */
+#traileringGuide {
+  width: 980px;
+  /* Font-styles from gmc */
+  font-family: Stratum,Arial,sans-serif;
+  color: #5d5d5d;
+}
+/* line 24, ../sass/partials/_component.scss */
+#traileringGuide #top {
+  width: 980px;
+  height: 340px;
+  background-image: url(../img/bg.jpg);
+  position: relative;
+}
+/* line 29, ../sass/partials/_component.scss */
+#traileringGuide #top .truck {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* line 34, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#welcome {
+  background-image: url(../img/welcome.png);
+  width: 980px;
+  height: 340px;
+}
+/* line 39, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#truck1 {
+  background-image: url(../img/Canyon_Speedboat.png);
+  width: 892px;
+  height: 236px;
+  bottom: 10px;
+}
+/* line 45, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#truck2 {
+  background-image: url(../img/1500_Airstream.png);
+  width: 930px;
+  height: 278px;
+}
+/* line 50, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#truck3 {
+  background-image: url(../img/2500_Sailboat.png);
+  width: 945px;
+  height: 294px;
+}
+/* line 55, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#truck4 {
+  background-image: url(../img/2500_RV.png);
+  width: 945px;
+  height: 293px;
+}
+/* line 60, ../sass/partials/_component.scss */
+#traileringGuide #top .truck#truck5 {
+  background-image: url(../img/3500_HorseTrailer.png);
+  width: 951px;
+  height: 272px;
+}
+/* line 66, ../sass/partials/_component.scss */
+#traileringGuide #top #overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+/* line 74, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav {
+  background-image: url(../img/nav-bg.jpg);
+  padding: 22px 10px;
+  position: relative;
+}
+/* line 78, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #reset {
+  font-size: 13px;
+}
+/* line 81, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav {
+  position: absolute;
+  right: 5px;
+  bottom: 22px;
+}
+/* line 85, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn {
+  outline-style: none;
+  position: relative;
+  width: 82px;
+}
+/* line 89, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn .text {
+  font-size: 9px;
+}
+/* line 91, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn .text sup {
+  font-size: 97%;
+}
+/* line 95, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn .strong {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 102, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn.active .text,
+#traileringGuide #bottom #nav #rightNav .rightBtn:hover .text {
+  visibility: hidden;
+}
+/* line 106, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav .rightBtn.active::after,
+#traileringGuide #bottom #nav #rightNav .rightBtn:hover::after {
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  font-size: 11px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  height: 0;
+}
+/* line 119, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button1.active,
+#traileringGuide #bottom #nav #rightNav #button1:hover {
+  background-image: url(../img/boat.jpg);
+}
+/* line 123, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button1.active::after,
+#traileringGuide #bottom #nav #rightNav #button1:hover::after {
+  content: "7,700 lbs";
+}
+/* line 127, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button2.active,
+#traileringGuide #bottom #nav #rightNav #button2:hover {
+  background-image: url(../img/airstream.jpg);
+}
+/* line 131, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button2.active::after,
+#traileringGuide #bottom #nav #rightNav #button2:hover::after {
+  content: "12,000 lbs";
+}
+/* line 135, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button3.active,
+#traileringGuide #bottom #nav #rightNav #button3:hover {
+  background-image: url(../img/sailboat.jpg);
+}
+/* line 139, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button3.active::after,
+#traileringGuide #bottom #nav #rightNav #button3:hover::after {
+  content: "14,500 lbs";
+}
+/* line 143, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button4.active,
+#traileringGuide #bottom #nav #rightNav #button4:hover {
+  background-image: url(../img/rv.jpg);
+}
+/* line 147, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button4.active::after,
+#traileringGuide #bottom #nav #rightNav #button4:hover::after {
+  content: "17,500 lbs";
+}
+/* line 151, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button5.active,
+#traileringGuide #bottom #nav #rightNav #button5:hover {
+  background-image: url(../img/trailer.jpg);
+}
+/* line 155, ../sass/partials/_component.scss */
+#traileringGuide #bottom #nav #rightNav #button5.active::after,
+#traileringGuide #bottom #nav #rightNav #button5:hover::after {
+  content: "22,900 lbs";
+}
+/* line 161, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info {
+  color: white;
+  height: 134px;
+  background-color: #171717;
+  padding: 15px 25px;
+}
+/* line 166, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info .details {
+  font-size: 13px;
+  line-height: 1.4;
+  display: none;
+  position: relative;
+}
+/* line 171, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info .details .left {
+  position: absolute;
+}
+/* line 174, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info .details .right {
+  position: absolute;
+  left: 479px;
+}
+/* line 179, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info div {
+  display: inline-block;
+}
+/* line 182, ../sass/partials/_component.scss */
+#traileringGuide #bottom #info .header {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+/* line 192, ../sass/partials/_component.scss */
+#traileringGuide button {
+  color: black;
+  text-transform: uppercase;
+  height: 42px;
+  margin: 5px;
+  background: #cccccc;
+  /* Old Browsers */
+  background: -moz-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #bcbcbc));
+  /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* IE 10+ */
+  background: linear-gradient(to bottom, #cccccc 0%, #bcbcbc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#575757', GradientType=0);
+  /* IE6-9 */
+  padding: 5px;
+  border: none;
+}
+/* line 215, ../sass/partials/_component.scss */
+html.ie9 #traileringGuide button {
+  filter: none;
+}
+/* line 219, ../sass/partials/_component.scss */
+#traileringGuide .cnt_btn_1 {
+  display: inline-block;
+  margin-left: 15px;
+  position: relative;
+}
+/* line 224, ../sass/partials/_component.scss */
+#traileringGuide .btnOverlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+}
+
+/* line 11, ../sass/select.scss */
+#traileringGuide {
+  /*h1 {
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  span { 
+    font-size: 13px;
+    display: block;
+    padding-left: 4px;
+  }
+}
+p {
+  margin-top: 200px;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    //background-color: darken($select-background, 2);
+    //@include transition(all 0.2s ease-in);
+    //&:hover {
+    //  background-color: darken($select-background, 5);
+    //}
+  }
+}*/
+}
+/* line 39, ../sass/select.scss */
+#traileringGuide .select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+/* line 44, ../sass/select.scss */
+#traileringGuide .select {
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  top: 18px;
+  margin-top: -16px;
+  font-size: 14px;
+  color: #000;
+  width: 386px;
+  height: 42px;
+}
+/* line 56, ../sass/select.scss */
+#traileringGuide .select-styled {
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #cccccc;
+  /* Old Browsers */
+  background: -moz-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #bcbcbc));
+  /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cccccc 0%, #bcbcbc 100%);
+  /* IE 10+ */
+  background: linear-gradient(to bottom, #cccccc 0%, #bcbcbc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#575757', GradientType=0);
+  /* IE6-9 */
+  padding: 12px 15px;
+}
+/* line 81, ../sass/select.scss */
+html.ie9 #traileringGuide .select-styled {
+  filter: none;
+}
+/* line 84, ../sass/select.scss */
+#traileringGuide .select-styled:after {
+  content: url(../img/chev.png);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/* line 92, ../sass/select.scss */
+#traileringGuide .select-styled:active:after, #traileringGuide .select-styled.active:after {
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+/* line 101, ../sass/select.scss */
+#traileringGuide .select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: .7;
+  color: #fff;
+  background: #999999;
+  /* Old Browsers */
+  background: -moz-linear-gradient(top, #999999 0%, #666666 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #999999), color-stop(100%, #666666));
+  /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(top, #999999 0%, #666666 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #999999 0%, #666666 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #999999 0%, #666666 100%);
+  /* IE 10+ */
+  background: linear-gradient(to bottom, #999999 0%, #666666 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#575757', GradientType=0);
+  /* IE6-9 */
+}
+/* line 130, ../sass/select.scss */
+#traileringGuide .select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+}
+/* line 140, ../sass/select.scss */
+#traileringGuide .select-options li[rel="hide"] {
+  display: none;
+}
+/* line 143, ../sass/select.scss */
+#traileringGuide .select-options li.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=trailering-guide.css.map */
