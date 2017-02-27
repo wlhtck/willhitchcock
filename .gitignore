@@ -28,11 +28,3 @@ bower_components/
 components/src/
 escalade-seat-config/
 node_modules/
-
-# Images #
-##########
-/src/img/
-
-# Miscellaneous #
-##########
-/src/misc/
