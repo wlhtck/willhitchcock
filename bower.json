@@ -16,10 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "angular2#^1.5.7",
-    "Materialize": "materialize#^0.97.6",
-    "angular-route": "^1.5.7",
-    "angular-inview": "^1.5.7",
-    "font-awesome": "^4.6.3"
+    "angular": "angular#1.5.7",
+    "Materialize": "materialize#0.97.6",
+    "angular-route": "1.5.7",
+    "angular-inview": "1.5.7",
+    "font-awesome": "4.6.3"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
   }
 }
