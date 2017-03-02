@@ -16,22 +16,12 @@ Thumbs.db
 
 # Build #
 ########
-build/dev/
-
-# Data #
-########
-/src/json
+build/
+.sass-cache
+*.css.map
 
 # Components #
 ##############
 bower_components/
-/components/
+escalade-seat-config/
 node_modules/
-
-# Images #
-##########
-/src/img/
-
-# Miscellaneous #
-##########
-/src/misc/

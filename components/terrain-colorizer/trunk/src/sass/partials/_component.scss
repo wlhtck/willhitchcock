@@ -1,0 +1,302 @@
+#content { 
+  width: 100%;
+  height: 100%;
+
+  iframe {
+    width: 100%;
+    height: 100%;    
+  }
+
+  .juneBug {
+  	position:absolute;
+  	top:10%;
+  	bottom:0px;
+  }
+
+}
+#spacer {
+  height: 100vh;
+}
+
+#video-colorizer {
+  width: 980px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  background-color:white;
+
+  /* Font-styles from gmc */
+  font-family: Stratum,Arial,sans-serif;
+  color: #5d5d5d;
+
+  .mmScrollBtn {
+      z-index: 100;
+      height: 50px;
+      width: 28px;
+      background: url(../img/icon_sprite.png) no-repeat center 0;
+      display: block;
+      position: absolute;
+      &.next {
+        right: 5px;
+        background-position: -171px -5291px;
+        &:hover {
+          background-position: -171px -5380px;
+        }
+      }
+      &.prev {
+        left: 5px;
+        background-position: 0 -5291px;
+        &:hover {
+          background-position: 0 -5380px;
+        }
+      }
+  }
+
+  .arrow-style-1 .mmScrollBtn{
+    &.next {
+      background-position: -171px -5043px;
+      &:hover {
+        background-position: -171px -5466px;
+      }
+
+    }
+    &.prev {
+      background-position: 0 -5043px;
+      &:hover {
+        background-position: 0 -5466px;
+      }
+    }
+  }
+
+  button {
+    background: 0;
+    border: 0;
+    padding: 0;
+  }
+  .video-container {
+    height: calc(100% - 150px);
+    padding-bottom: initial;
+    width: 100%;
+    position: relative;
+    transition: opacity .5s;
+    overflow: hidden;
+    .video_player {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform:translateY(-50%);
+      transition: opacity .5s;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .dragable {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    cursor: url('../img/drag.png'), move;
+    &.is-pointer-down {
+      cursor: url('../img/drag-down.png'), move;
+    }
+  }
+
+
+  .nav {
+    background-color: white;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    //width: calc(100% - 96px);
+    display: block;
+    padding: 75px 48px 25px;
+    z-index: 2;
+    .ext-colors, .int-colors {
+      display: inline-block;
+      position: absolute;
+      padding: 0 63px;
+      font-size: 0;
+
+      .color-wrapper {
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: top;
+        .active + .tool-tip{
+          display: block;
+        }
+        &:hover {
+          .tool-tip {
+            display: block;
+            z-index: 1;
+          }
+        }
+        .tool-tip {
+          text-transform: uppercase;
+          color: #6f6f6f;
+          display: none;
+          position: absolute;
+          top: -45px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 20px;
+          width: 100%;
+          text-align: center;
+          background-color: white;
+        }
+        .color-chip {
+          height: 46px;
+          width: 46px;
+          margin: 0 3px;
+          background-color: transparent;
+          position: relative;
+          &:hover {
+            .tool-tip {
+              display: inline-block;
+            }
+          }
+          .tool-tip {
+            display: none;
+            position: absolute;
+            top: -45px;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: 20px;
+          }
+
+          &.active:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 12px;
+            background-image: url(../img/check.png);
+          }
+          &#ext-chip-0 {
+            background-image: url(../img/chip-0.png);
+          }
+          &#ext-chip-1 {
+            background-image: url(../img/chip-1.png);
+          }
+          &#ext-chip-2 {
+            background-image: url(../img/chip-2.png);
+          }
+          &#ext-chip-3 {
+            background-image: url(../img/chip-3.png);
+          }
+          &#ext-chip-4 {
+            background-image: url(../img/chip-4.png);
+          }
+          &#ext-chip-5 {
+            background-image: url(../img/chip-5.png);
+          }
+          &#ext-chip-6 {
+            background-image: url(../img/chip-6.png);
+          }
+          &#ext-chip-7 {
+            background-image: url(../img/chip-7.png);
+          }
+
+          &#int-chip-0 {
+            background-image: url(../img/int-chip-0.png);
+          }
+          &#int-chip-1 {
+            background-image: url(../img/int-chip-1.png);
+          }
+
+        }
+      }
+    }
+    .int-colors {
+      padding: 0 165px;
+    }
+
+    .toggle, .toggle-trim {
+      display: inline-block;
+      padding: 10.5px 0;
+      button, span {
+        font-weight: bold;
+        font-size: 21px;
+      }
+      .divider {
+        background-color:initial;
+        padding-left: 10px;
+        margin-right: 10px;
+        height: 24px;
+        border-right: 1px #d4d4d4 solid;
+        display: inline-block;
+        position: relative;
+        bottom: -5px;
+      }
+    }
+    .toggle-trim {
+      position: absolute;
+      right: 48px;
+    }
+
+    
+  }
+
+  .mmScrollBtn {
+    top: 50%;
+    cursor: pointer;
+  }
+
+  .colors, .arrow, .nav, .mmScrollBtn {
+    transition: opacity .5s;
+  }
+
+  //temp button styles
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+  .carousel-container {
+    transition: opacity .5s;
+    position: relative;
+    top: -75%;
+    .carousel-custom {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      transition: opacity .5s;
+      padding-top: 70px;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+        z-index: 1;
+      }
+      .carousel-img {
+        width: 100%;
+      }
+    }
+    .mmScrollBtn {
+      transform: translateY(-3px);
+    }
+  }
+
+  .hide-custom {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .interior, .exterior {
+    transition: color .5s;
+    color: #7B7B7B;
+    border-bottom: 3px solid transparent;
+    &.active {
+      color: #bc2939;
+    }
+    &:hover {
+      border-bottom: 3px solid #a5071e;
+    }
+    &.active:hover {
+      border-bottom: 3px solid transparent;
+    }
+  }
+}
