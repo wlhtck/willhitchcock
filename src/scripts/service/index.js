@@ -11,15 +11,16 @@ williamJHitchcock.use(express.static(__dirname + '/public/'));
 //send email
 williamJHitchcock.get('/contact', function(req, res) {
     // create reusable transporter object using the default SMTP transport
-    var transporter = nodemailer.createTransport('smtps://william.hitchcock1%40gmail.com:qedvhkuorcxrerkz@smtp.gmail.com');
+
+    var transporter = nodemailer.createTransport('smtps://william.hitchcock1%40gmail.com:omusofgnvqpvezqd@smtp.gmail.com');
 
     console.log(req.query);
 
     // setup e-mail data
     var mailOptions = {
-        from: '"' + req.query.name + '" <me@williamjhitchcock.com>',
+        from: '"' + req.query.name + '" <contact@willhitchcock.me>',
         replyTo: req.query.email,
-        to: 'me@williamjhitchcock.com',
+        to: 'hi@willhitchcock.me',
         subject: req.query.sub,
         text: req.query.msg
     };
