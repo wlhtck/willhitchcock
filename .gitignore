@@ -17,6 +17,8 @@ Thumbs.db
 # Build #
 ########
 build/
+.sass-cache
+*.css.map
 
 # Components #
 ##############
