@@ -11,6 +11,20 @@ body {
 main {
     flex: 1 0 auto;
     overflow: hidden;
+    position: relative;
+}
+
+.page {
+    &.ng-enter {
+        @include slideInRight();
+    }
+
+    &.ng-leave {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include slideOutLeft();
+    }
 }
 
 a:focus {

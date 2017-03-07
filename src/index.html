@@ -16,7 +16,9 @@
 <body class="{{noScroll}}">
     <header ng-include="'partials/header.html'"></header>
     
-    <main ng-view></main>
+    <main>
+        <div class="page" ng-view></div>
+    </main>
     
     <footer class="page-footer" ng-include="'partials/footer.html'"></footer>
 

@@ -84,6 +84,18 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: '<%= pkg.dev.app %>/misc/',
                     filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: '<%= pkg.src %>/sass',
+                    src: '**/*.scss',
+                    dest: '<%= pkg.dev.app %>/src/sass',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    cwd: 'bower_components',
+                    src: '**/*.scss',
+                    dest: '<%= pkg.dev.app %>/bower_components',
+                    filter: 'isFile'
                 }]
             },
             prod: {
@@ -175,7 +187,8 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     outputStyle: 'expanded',
-                    sourceMap: true
+                    sourceMap: true,
+                    sourceComments: true
                 },
                 files: {
                     '<%= pkg.dev.app %>/css/style.css': '<%= pkg.src %>/sass/main.scss'

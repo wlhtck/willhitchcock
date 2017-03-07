@@ -6,7 +6,7 @@
 @import "./bower_components/Materialize/sass/components/color";
 
 // Variables;
-@import 'variables';
+@import 'partials/variables';
 @import "./bower_components/Materialize/sass/components/variables";
 
 // Reset
@@ -39,14 +39,19 @@
 //@import "./bower_components/Materialize/sass/components/date_picker/default";
 //@import "./bower_components/Materialize/sass/components/date_picker/default.date";
 //@import "./bower_components/Materialize/sass/components/date_picker/default.time";
-
 @import './bower_components/font-awesome/scss/font-awesome.scss';
-@import 'custom-error';
-@import 'header';
-@import 'helpers';
-@import 'modal';
-@import 'resume';
-@import 'portfolio';
-@import 'contact';
-@import 'footer';
-@import 'about';
+
+@import './bower_components/animatewithsass/properties';
+@import './bower_components/animatewithsass/_sliding-entrances/slideInRight';
+@import './bower_components/animatewithsass/_sliding-exits/slideOutLeft';
+
+@import 'partials/helpers';
+@import 'partials/custom-error';
+@import 'partials/modal';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+@import 'partials/pages/resume';
+@import 'partials/pages/portfolio';
+@import 'partials/pages/contact';
