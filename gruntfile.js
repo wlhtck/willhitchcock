@@ -224,8 +224,8 @@ module.exports = function(grunt) {
                 tasks: ['concat:dev']
             },
             sass: {
-                files: '<%= pkg.src %>/sass/*.scss',
-                tasks: ['sass:dev']
+                files: '<%= pkg.src %>/sass/**/*.scss',
+                tasks: ['sass:dev', 'copy:dev']
             },
             //less: {
             //    files: '<%= pkg.src %>/less/*.less',

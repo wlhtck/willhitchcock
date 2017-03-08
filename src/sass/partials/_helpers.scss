@@ -12,17 +12,21 @@ main {
     flex: 1 0 auto;
     overflow: hidden;
     position: relative;
+    transition: all .5s;
 }
 
 .page {
-    &.ng-enter {
+    width: 100%;
+    &:after {
+        content: ' ';
+    }
+    &.ng-enter{
         @include slideInRight();
     }
 
     &.ng-leave {
         position: absolute;
         top: 0;
-        width: 100%;
         @include slideOutLeft();
     }
 }
