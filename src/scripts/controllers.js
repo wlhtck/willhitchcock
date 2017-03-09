@@ -79,16 +79,6 @@ pageCtrls
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 
-        $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-
-        $('#message').bind('keyup', function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
-        $(window).resize(function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
         $http.get('json/contact.json').then(function(resp) {
             $scope.contact = resp.data;
         });
@@ -100,7 +90,7 @@ pageCtrls
                     '&sub=' + $scope.msg.subject +
                     '&msg=' + $scope.msg.message)
                 .then(function(resp) {
-                    $scope.resp.response = data;
+                    $scope.response = resp.data;
                 });
         };
     }])
