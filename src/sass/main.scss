@@ -42,8 +42,11 @@
 @import './bower_components/font-awesome/scss/font-awesome.scss';
 
 @import './bower_components/animatewithsass/properties';
-@import './bower_components/animatewithsass/_sliding-entrances/slideInRight';
-@import './bower_components/animatewithsass/_sliding-exits/slideOutLeft';
+//@import './bower_components/animatewithsass/_sliding-entrances/slideInRight';
+//@import './bower_components/animatewithsass/_sliding-exits/slideOutLeft';
+
+@import 'partials/slideInRight';
+@import 'partials/slideOutLeft';
 
 @import 'partials/helpers';
 @import 'partials/custom-error';
