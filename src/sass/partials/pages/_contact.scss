@@ -1,23 +1,13 @@
 .contact {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 190px);
-    @media #{$medium-and-up} {
-        min-height: calc(100vh - 192px);
-    }
-    @media #{$large-and-up} {
-        min-height: calc(100vh - 194px);
-    }
     .section-title {
         align-self: flex-start;
         width: 100%;
     }
-    .relative {
-        width: 100%;
-        flex-grow: 99;
-    }
     .form-block {
         width: 100%;
+        &.center {
+            padding-top: 2rem;
+        }
         &.ng-hide {
             position: absolute;
             top: 0;
