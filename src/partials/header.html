@@ -12,9 +12,9 @@
             </div>
         </div>
     </div>
-    <nav ng-class="sticky ? 'sticky' : ''">
+    <nav id="nav" ng-class="sticky ? 'sticky' : ''">
         <ul>
-            <li ng-repeat="item in header.nav"><a href="{{item.href}}" ng-class="curPage === item.href ? 'active' : '' +' '+ item.class"><i class="material-icons left hide-on-small-only">{{item.icon}}</i><span class="">{{item.name}}</span></a></li>
+            <li ng-repeat="item in header.nav"><a ng-href="{{item.href}}" ng-class="curPage === item.href ? 'active' : '' +' '+ item.class"><i class="material-icons left hide-on-small-only">{{item.icon}}</i><span class="">{{item.name}}</span></a></li>
         </ul>
     </nav>
 </div>

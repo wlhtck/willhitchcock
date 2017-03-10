@@ -11,6 +11,24 @@ body {
 main {
     flex: 1 0 auto;
     overflow: hidden;
+    position: relative;
+    transition: all .5s;
+}
+
+.page {
+    width: 100%;
+    &:after {
+        content: ' ';
+    }
+    &.ng-enter{
+        @include slideInRight();
+    }
+
+    &.ng-leave {
+        position: absolute;
+        top: 0;
+        @include slideOutLeft();
+    }
 }
 
 a:focus {
@@ -74,7 +92,6 @@ a:focus {
     background-color: $primary-color;
     opacity: .8;
 }
-
 .full-width {
     width: 100%;
 }
@@ -84,7 +101,8 @@ a:focus {
 }
 
 .section-title {
-    padding: 2rem 0;
+    margin: 0;
+    padding: 3rem 0;
     position: relative;
     color: $secondary-color;
     .title-text {
