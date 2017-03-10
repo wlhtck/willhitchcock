@@ -1,4 +1,4 @@
-var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'angular-inview']);
+var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'angular-inview', 'ngAnimate', 'smoothScroll']);
 
 pageCtrls
     .controller('HeadCtrl', ['$scope', '$http', function($scope, $http) {
@@ -8,15 +8,16 @@ pageCtrls
 
 
     }])
-    .controller('HeaderCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
+    .controller('HeaderCtrl', ['$scope', '$http', '$location', 'smoothScroll', function($scope, $http, $location, smoothScroll) {
         $http.get('json/header.json').then(function(resp) {
             $scope.header = resp.data;
         });
-
+        // $anchorScroll.yOffset = 64; 
         $scope.curPage = '#!' + $location.url();
 
         $scope.$on('$locationChangeSuccess', function() {
             $scope.curPage = '#!' + $location.url();
+            smoothScroll(document.getElementById('page-content'), {offset: 64});
         });
 
         $scope.stick = function($inview) {
@@ -78,16 +79,6 @@ pageCtrls
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 
-        $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-
-        $('#message').bind('keyup', function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
-        $(window).resize(function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
         $http.get('json/contact.json').then(function(resp) {
             $scope.contact = resp.data;
         });
@@ -99,7 +90,7 @@ pageCtrls
                     '&sub=' + $scope.msg.subject +
                     '&msg=' + $scope.msg.message)
                 .then(function(resp) {
-                    $scope.resp.response = data;
+                    $scope.response = resp.data;
                 });
         };
     }])

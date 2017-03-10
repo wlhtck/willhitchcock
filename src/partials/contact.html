@@ -6,7 +6,7 @@
         </span>
     </h5>
     <div class="relative">
-        <div class="card-panel form-block" ng-show="!contactForm.$submitted">
+        <div class="form-block" ng-show="!contactForm.$submitted">
             <form name="contactForm" ng-submit="contactForm.$valid ? sendEmail() : contactForm.$submitted = false" novalidate>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">person</i>
@@ -32,13 +32,13 @@
                     <label for="message" data-error="Please enter a subject">Message</label>
                     <p class="error-msg" ng-show="contactForm.message.$invalid && contactForm.message.$touched"><i class="material-icons">error</i> Please enter a message</p>
                 </div>
-                <button ng-class="contactForm.$invalid ? 'disabled' : ''" class="btn waves-effect waves-light right" type="submit">Submit
+                <button ng-class="contactForm.$invalid ? 'disabled' : ''" class="btn waves-effect waves-light right" type="submit">Send
                     <i class="material-icons right">send</i>
                 </button>
                 <div class="clear"></div>
             </form>
         </div>
-        <div class="center card-panel form-block" ng-show="contactForm.$submitted && !response">
+        <div class="center form-block" ng-show="contactForm.$submitted && !response">
             <div class="preloader-wrapper huge active">
                 <div class="spinner-layer">
                     <div class="circle-clipper left">
@@ -57,7 +57,7 @@
                 <h5 class="color-secondary"><span>Sending...</span></h5>
             </div>
         </div>
-        <div class="center card-panel form-block" ng-class="'color-' + response.status" ng-show="response">
+        <div class="center form-block" ng-class="'color-' + response.status" ng-show="response">
             <i class="material-icons large">{{response.icon}}</i>
             <div class="center-align">
                 &nbsp;

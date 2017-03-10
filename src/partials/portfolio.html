@@ -21,7 +21,7 @@
             </h5>
         </div>
         
-        <div ng-repeat="item in portfolio.portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)" class="col m3 s12" >
+        <div ng-repeat="item in portfolio.portfolio.items" ng-if="(!item.hiddenSmall || windowWidth > 992)" class="wh-bounceInUp col m3 s12" >
             <!--modal portfolio item-->
             <div ng-if="item.partial" class="card hoverable clickable" ng-click="item.partial ? showContent($index) : return" ng-class="($index < visible) ? 'item-show' : 'item-hide'">
                 <div class="card-image waves-effect waves-light full-width">
