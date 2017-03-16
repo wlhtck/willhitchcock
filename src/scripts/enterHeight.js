@@ -3,7 +3,7 @@ angular.module('enterHeight', [])
 //set the height of the target element to the height of its child .ng-enter
 //useful for animations that require position absolute during the animation
 
-.directive('enterHeight', ['$interval', function($interval) {
+.directive('enterHeight', ['$interval', 'dateFilter', function($interval, dateFilter) {
 
   function link(scope, element, attrs) {
 
