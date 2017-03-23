@@ -9,6 +9,10 @@
         "icon": "folder",
         "moreButton": "View All",
         "items": [{
+            "graphic": "img/graphics/gmsupplier-graphic.jpg",
+            "header": "GM Supplier Diversity",
+            "href":"http://www.gmsupplierdiversity.com/"
+        }, {
             "graphic": "img/graphics/shocktop-graphic.jpg",
             "header": "Shocktop Beer",
             "href":"http://shocktopbeer.com/"
