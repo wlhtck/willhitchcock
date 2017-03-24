@@ -9,7 +9,7 @@
         "icon": "folder",
         "moreButton": "View All",
         "items": [{
-            "graphic": "img/graphics/shocktop-graphic2.jpg",
+            "graphic": "img/graphics/shocktop-graphic.jpg",
             "header": "Shocktop Beer",
             "href":"http://shocktopbeer.com/"
         }, {

@@ -1,4 +1,4 @@
-<div class="container resume">
+<div class="container resume" id="resume">
     <div class="row">
         <div class="col s12">
             <h5 class="section-title">
@@ -21,7 +21,7 @@
                     <span class="title-text">{{resume.experience.header}}</span>
                 </span>
             </h5>
-            <div class="card hoverable" ng-repeat="item in resume.experience.list">
+            <div class="card hoverable wh-bounceInUp" ng-repeat="item in resume.experience.list">
                 <div class="hover-activator activator card-image waves-effect waves-light full-width">
                     <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
@@ -59,7 +59,7 @@
                     <span class="title-text">{{resume.skills.header}}</span>
                 </span>
             </h5>
-            <div class="card-panel skill" ng-repeat="item in resume.skills.list">
+            <div class="card-panel skill wh-bounceInUp" ng-repeat="item in resume.skills.list">
                 <div class="row no-margin valign-wrapper">
                     <div class="col s2 m4">
                         <img ng-src="{{item.logo}}" alt="" class="img-thumb valign center-block responsive-img">

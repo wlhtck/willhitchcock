@@ -1,0 +1,20 @@
+.contact {
+    .section-title {
+        align-self: flex-start;
+        width: 100%;
+    }
+    .form-block {
+        width: 100%;
+        &.center {
+            padding-top: 2rem;
+        }
+        &.ng-hide {
+            position: absolute;
+            top: 0;
+            @include slideOutLeft();
+        }
+        &.ng-animate:not(.ng-hide) {
+            @include slideInRight();
+        }
+    }
+}

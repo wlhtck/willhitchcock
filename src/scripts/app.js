@@ -1,4 +1,4 @@
-var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl']);
+var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight']);
 
 willHitchcock.config(['$routeProvider', function($routeProvider) {
 	$routeProvider

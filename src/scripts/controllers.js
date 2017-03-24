@@ -1,22 +1,23 @@
-var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'angular-inview']);
+var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'angular-inview', 'ngAnimate', 'smoothScroll']);
 
 pageCtrls
     .controller('HeadCtrl', ['$scope', '$http', function($scope, $http) {
-        $http.get('json/head.json').success(function(data) {
-            $scope.head = data;
+        $http.get('json/head.json').then(function(resp) {
+            $scope.head = resp.data;
         });
 
 
     }])
-    .controller('HeaderCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
-        $http.get('json/header.json').success(function(data) {
-            $scope.header = data;
+    .controller('HeaderCtrl', ['$scope', '$http', '$location', 'smoothScroll', function($scope, $http, $location, smoothScroll) {
+        $http.get('json/header.json').then(function(resp) {
+            $scope.header = resp.data;
         });
-
-        $scope.curPage = '#' + $location.url();
+        // $anchorScroll.yOffset = 64; 
+        $scope.curPage = '#!' + $location.url();
 
         $scope.$on('$locationChangeSuccess', function() {
-            $scope.curPage = '#' + $location.url();
+            $scope.curPage = '#!' + $location.url();
+            smoothScroll(document.getElementById('page-content'), {offset: 64});
         });
 
         $scope.stick = function($inview) {
@@ -24,13 +25,13 @@ pageCtrls
         }
     }])
     .controller('AboutCtrl', ['$scope', '$http', function($scope, $http) {
-        $http.get('json/about.json').success(function(data) {
-            $scope.about = data;
+        $http.get('json/about.json').then(function(resp) {
+            $scope.about = resp.data;
         });
     }])
     .controller('ResumeCtrl', ['$scope', '$http', function($scope, $http) {
-        $http.get('json/resume.json').success(function(data) {
-            $scope.resume = data;
+        $http.get('json/resume.json').then(function(resp) {
+            $scope.resume = resp.data;
         });
     }])
     .controller('PortfolioCtrl', ['$scope', '$http', '$window', '$rootScope', function($scope, $http, $window, $rootScope) {
@@ -70,26 +71,16 @@ pageCtrls
             $scope.visible = $scope.portfolio.portfolio.items.length;
         }
 
-        $http.get('json/portfolio.json').success(function(data) {
-            $scope.portfolio = data;
+        $http.get('json/portfolio.json').then(function(resp) {
+            $scope.portfolio = resp.data;
         });
 
 
     }])
     .controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 
-        $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-
-        $('#message').bind('keyup', function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
-        $(window).resize(function() {
-            $('.contact .relative').css('min-height', $('.form-block:visible').outerHeight(true));
-        });
-
-        $http.get('json/contact.json').success(function(data) {
-            $scope.contact = data;
+        $http.get('json/contact.json').then(function(resp) {
+            $scope.contact = resp.data;
         });
 
         $scope.sendEmail = function() {
@@ -98,14 +89,14 @@ pageCtrls
                     '&email=' + $scope.msg.email +
                     '&sub=' + $scope.msg.subject +
                     '&msg=' + $scope.msg.message)
-                .success(function(data) {
-                    $scope.response = data;
+                .then(function(resp) {
+                    $scope.response = resp.data;
                 });
         };
     }])
     .controller('FooterCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.date = new Date();
-        $http.get('json/footer.json').success(function(data) {
-            $scope.footer = data;
+        $http.get('json/footer.json').then(function(resp) {
+            $scope.footer = resp.data;
         });
     }]);
