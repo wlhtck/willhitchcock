@@ -1,0 +1,86 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "server": {
+        "baseDir": "dist"
+      }
+    },
+
+    "static": {
+      "src": "static",
+      "dest": "./"
+    },
+
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "entries": {
+        "app": ["./app.js"]
+      },
+      "extensions": ["js", "json"],
+      "babel": {
+        "presets": ["es2015", "stage-1"],
+        "plugins": []
+      },
+      "extractSharedJs": false
+    },
+    "css": {
+      "src": "sass",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": ["last 3 versions"]
+      },
+      "sass": {
+        "indentedSyntax": true,
+        "includePaths": [
+          "bower_components",
+          "node_modules"
+        ]
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "html",
+      "dest": "./",
+      "dataFile": "data/global.json",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "htm", "json"]
+    },
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "_modules",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprite": {
+      "src": "icons",
+      "dest": "images",
+      "extensions": ["svg"]
+    },
+
+    "production" : {
+      "rev": true
+    }
+  }
+}
