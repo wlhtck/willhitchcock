@@ -2,7 +2,6 @@ if(global.production) return
 
 var browserSync       = require('browser-sync')
 var gulp              = require('gulp')
-var webpack           = require('webpack')
 var config            = require('../config')
 var pathToUrl         = require('../lib/pathToUrl')
 

@@ -6,6 +6,7 @@ var gutil    = require('gulp-util')
 var logger   = require('morgan')
 var open     = require('open')
 var path     = require('path')
+var mailer  = require('../lib/mailer')
 
 var settings = {
   root: path.resolve(process.cwd(), config.root.dest),
@@ -21,6 +22,7 @@ var serverTask = function() {
   var url = 'http://localhost:' + settings.port
 
   express()
+    .get('/contact', mailer)
     .use(compress())
     .use(logger(settings.logLevel))
     .use('/', express.static(settings.root, settings.staticOptions))

@@ -13,7 +13,6 @@ var paths = {
 }
 
 var htmlTask = function() {
-  console.log(paths.src, paths.dest)
 
   return gulp.src(paths.src)
     .pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))

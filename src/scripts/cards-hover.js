@@ -1,3 +1,6 @@
+require('velocity-animate');
+
+// do this the angular way, maybe we can avoid including jquery
 (function($) {
 
     $(document).ready(function() {

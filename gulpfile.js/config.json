@@ -12,22 +12,15 @@
     },
 
     "static": {
-      "src": "static",
-      "dest": "./"
+      "src": "misc",
+      "dest": "misc"
     },
 
-    "js": {
-      "src": "js",
+    "browserify": {
+      "src": "scripts",
       "dest": "js",
-      "entries": {
-        "app": ["./app.js"]
-      },
-      "extensions": ["js", "json"],
-      "babel": {
-        "presets": ["es2015", "stage-1"],
-        "plugins": []
-      },
-      "extractSharedJs": false
+      "app": "./app.js",
+      "extensions": ["js", "json"]
     },
     "css": {
       "src": "sass",
@@ -44,15 +37,18 @@
       },
       "extensions": ["sass", "scss", "css"]
     },
-
     "html": {
       "src": "html",
       "dest": "./",
-      "dataFile": "data/global.json",
       "htmlmin": {
         "collapseWhitespace": true
       },
       "extensions": ["html", "htm", "json"]
+    },
+    "json": {
+      "src": "html/json",
+      "dest": "json",
+      "extensions": ["json", "js"]
     },
     "images": {
       "src": "img",
@@ -64,19 +60,6 @@
       "src": "fonts",
       "dest": "fonts",
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
-    },
-
-    "iconFont": {
-      "src": "icons",
-      "dest": "fonts",
-      "sassDest": "_modules",
-      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
-    },
-
-    "svgSprite": {
-      "src": "icons",
-      "dest": "images",
-      "extensions": ["svg"]
     },
 
     "production" : {

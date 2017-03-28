@@ -4,16 +4,17 @@ var path       = require('path')
 var revReplace = require('gulp-rev-replace')
 
 // 2) Update asset references with reved filenames in compiled css + js
-gulp.task('rev-update-references', function(){
+var paths= {
+    src: path.join(config.root.dest, config.tasks.json.dest, '**/*.{' + config.tasks.json.extensions + '}'),
+    dest: path.join(config.root.dest, config.tasks.json.dest),
+}
+
+gulp.task('rev-update-json', function(){
   var manifest = gulp.src(path.join(config.root.dest, "rev-manifest.json"))
-  var paths= {
-  	src: path.join(config.root.dest,'**/**.{css,js}')
-  }
-  
   return gulp.src(paths.src)
     .pipe(revReplace({
     	manifest: manifest,
-    	replaceInExtensions: ['.js', '.css', '.json']
+    	replaceInExtensions: ['.json']
     }))
-    .pipe(gulp.dest(config.root.dest))
+    .pipe(gulp.dest(paths.dest))
 })

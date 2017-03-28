@@ -17,6 +17,7 @@ angular.module('enterHeight', [])
     // start the UI update process; save the timeoutId for canceling
     
     //TODO: Add debounce logic to this to prevent this event firing many times per animation sequence
+    //TODO: look at how to eliminate dependency on jquery
     timeoutId = $interval(function() {
       var height = 0;
   		element.children('.ng-enter').each(function() {
