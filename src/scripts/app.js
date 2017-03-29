@@ -6,9 +6,9 @@ require('angular-route');
 
 require('./controllers');
 require('./enterHeight');
-require('./cards-hover')
+require('./cards-hover');
 
-var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight']);
+var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight', 'cardHover']);
 
 willHitchcock.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
