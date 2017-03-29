@@ -1,25 +1,22 @@
 {
   "name": "willhitchcock",
   "version": "1.0.0",
-  "repository": "https://github.com/will-hitchcock/willhitchcock-src.git",
+  "repository": "https://github.com/will-hitchcock/willhitchcock.git",
   "description": "Codebase for www.willhitchcock.com",
   "author": "William J Hitchcock",
   "license": "MIT",
   "devDependencies": {
-    "bower": "1.8.0",
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
+    "gulp-copy": "^1.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-browserify": "^0.5.1",
-    "gulp-changed": "^2.0.0",
-    "gulp-copy": "^1.0.0",
-    "gulp-cssnano": "^2.1.2",
     "gulp-express": "^0.3.5",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.2.0",
-    "gulp-notify": "^3.0.0",
     "gulp-rev": "^7.1.2",
     "gulp-rev-napkin": "^0.1.0",
     "gulp-rev-replace": "^0.4.3",
@@ -28,30 +25,37 @@
     "gulp-sizereport": "^1.2.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.11",
-    "imagemin-guetzli": "^0.1.5",
+    "gulp-notify": "^3.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-changed": "^2.0.0",
+    
+    "browser-sync": "^2.18.8",
+    
     "lodash": "^4.17.4",
-    "require-dir": "^0.3.1"
-  },
-  "dependencies": {
+    "del": "^2.2.2",
+    "imagemin-guetzli": "^0.1.5",
+    "require-dir": "^0.3.1",
+    "morgan": "^1.8.1",
+    "express": "4.14.0",
+    "compression": "^1.6.2",
+    "open": "0.0.5",
+    "nodemailer": "2.4.2",
+    
+    "bower": "1.8.0",
+
     "angular": "^1.6.3",
     "angular-animate": "^1.6.3",
     "angular-inview": "^2.1.0",
     "angular-route": "^1.6.3",
-    "compression": "^1.6.2",
-    "express": "4.14.0",
     "jquery": "^3.2.1",
-    "morgan": "^1.8.1",
     "ng-smooth-scroll": "^1.7.3",
-    "nodemailer": "2.4.2",
-    "open": "0.0.5",
     "velocity-animate": "^1.5.0"
   },
   "main": "/build/prod/service/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/bower/bin/bower install",
-    "start": "node_modules/gulp/bin/gulp production && node_modules/gulp/bin/gulp server",
+    "start": "node_modules/gulp/bin/gulp.js production && node_modules/gulp/bin/gulp.js server",
     "dev": "gulp"
   },
   "engines": {
