@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 service: 'build/prod',
                 app: 'build/prod/public'
             },
-            src: 'src/'
+            src: 'src'
         },
         clean: {
             dev: '<%= pkg.dev.service %>/**/*',
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             dev: {
                 files: [{
                     expand: true,
-                    cwd: 'src',
+                    cwd: '<%= pkg.src %>',
                     src: '*',
                     dest: '<%= pkg.dev.app %>',
                     filter: 'isFile'
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
             prod: {
                 files: [{
                     expand: true,
-                    cwd: 'src',
+                    cwd: '<%= pkg.src %>',
                     src: '*',
                     dest: '<%= pkg.prod.app %>',
                     filter: 'isFile'
@@ -188,6 +188,7 @@ module.exports = function(grunt) {
                 options: {
                     outputStyle: 'expanded',
                     sourceMap: true,
+                    sourceMapRoot: 'src/',
                     sourceComments: true
                 },
                 files: {
@@ -203,14 +204,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        //less: {
-        //    dev: {
-        //        paths: ['src', 'bower_components'],
-        //        files: {
-        //            '<%= pkg.dev.app %>/css/style.css': '<%= pkg.src %>/less/main.less'
-        //        }
-        //    }
-        //},
         watch: {
             options: {
                 livereload: true
@@ -273,6 +266,15 @@ module.exports = function(grunt) {
                     port: '80'
                 }
             }
+        },
+        browserSync: {
+            bsFiles:{
+                src: ['<%= pkg.dev.app %>/**/*']
+            },
+            options: {
+                watchTask: true,
+                proxy: 'localhost:8000'
+            }
         }
     });
 
@@ -281,14 +283,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-express-server');
-    grunt.loadNpmTasks('grunt-express-server');
+    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-hub');
 
-    grunt.registerTask('default', ['hub:all', 'clean:dev', /*'less'*/ 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'watch']);
-    grunt.registerTask('prod', ['hub:all', /*'less'*/ 'clean:prod', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
+    grunt.registerTask('default', ['hub:all', 'clean:dev', 'sass:dev', 'copy:dev', 'concat:dev', 'bower_concat:dev', 'express:dev', 'browserSync', 'watch']);
+    grunt.registerTask('prod', ['hub:all', 'clean:prod', 'sass:prod', 'copy:prod', 'concat:prod', 'bower_concat:prod', 'uglify:prod']);
 };

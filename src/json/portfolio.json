@@ -9,12 +9,16 @@
         "icon": "folder",
         "moreButton": "View All",
         "items": [{
-            "graphic": "img/graphics/shocktop-graphic2.jpg",
+            "graphic": "img/graphics/gmsupplier-graphic.jpg",
+            "header": "GM Supplier Diversity",
+            "href":"http://www.gmsupplierdiversity.com/"
+        }, {
+            "graphic": "img/graphics/shocktop-graphic.jpg",
             "header": "Shocktop Beer",
-            "href":"http://shocktopbeer.com/"
+            "href":"http://www.shocktopbeer.com/"
         }, {
             "graphic": "img/graphics/terrain-graphic.jpg",
-            "header": "Terrain Colorizer",
+            "header": "Terrain 360° Colorizer",
             "partial":"components/terrain-colorizer/index.html",
             "hiddenSmall":"true",
             "class":"hide-on-med-and-down"
