@@ -1,0 +1,13 @@
+.card {
+	overflow:hidden;
+	&:hover, &.active {
+		.card-reveal {
+			top:0;
+		}
+	}
+	.card-reveal {
+		transition: top .5s ease-in-out;
+		display:initial;
+
+	}
+}
