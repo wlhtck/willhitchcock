@@ -17,7 +17,7 @@
 @import "./bower_components/Materialize/sass/components/icons-material-design";
 @import "./bower_components/Materialize/sass/components/grid";
 @import "./bower_components/Materialize/sass/components/navbar";
-@import "./bower_components/Materialize/sass/components/roboto";
+// @import "./bower_components/Materialize/sass/components/roboto";
 @import "./bower_components/Materialize/sass/components/typography";
 @import "./bower_components/Materialize/sass/components/cards";
 //@import "./bower_components/Materialize/sass/components/toast";
@@ -39,14 +39,14 @@
 //@import "./bower_components/Materialize/sass/components/date_picker/default";
 //@import "./bower_components/Materialize/sass/components/date_picker/default.date";
 //@import "./bower_components/Materialize/sass/components/date_picker/default.time";
-@import './bower_components/font-awesome/scss/font-awesome.scss';
+//@import './bower_components/font-awesome/scss/font-awesome.scss';
 
-@import './bower_components/animatewithsass/properties';
-//@import './bower_components/animatewithsass/_sliding-entrances/slideInRight';
-//@import './bower_components/animatewithsass/_sliding-exits/slideOutLeft';
+@import 'partials/override/cards'
 
-@import 'partials/slideInRight';
-@import 'partials/slideOutLeft';
+@import 'partials/animations/variables'
+
+@import 'partials/animations/slideInRight';
+@import 'partials/animations/slideOutLeft';
 
 @import 'partials/helpers';
 @import 'partials/custom-error';
