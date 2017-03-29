@@ -1,11 +1,11 @@
 var config       = require('../config')
 if(!config.tasks.css) return
 
+var browserSync  = require('browser-sync')
+var sourcemaps   = require('gulp-sourcemaps')
 var gulp         = require('gulp')
 var gulpif       = require('gulp-if')
-var browserSync  = require('browser-sync')
 var sass         = require('gulp-sass')
-var sourcemaps   = require('gulp-sourcemaps')
 var handleErrors = require('../lib/handleErrors')
 var autoprefixer = require('gulp-autoprefixer')
 var path         = require('path')
@@ -25,7 +25,7 @@ var cssTask = function () {
     .pipe(gulpif(global.production, cssnano({autoprefixer: false})))
     .pipe(gulpif(!global.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dest))
-    .pipe(browserSync.stream())
+    .pipe(gulpif(!global.production, browserSync.stream()))
 }
 
 gulp.task('css', cssTask)

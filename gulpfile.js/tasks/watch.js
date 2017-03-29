@@ -1,3 +1,5 @@
+if(global.production) return
+
 var config = require('../config')
 var gulp   = require('gulp')
 var path   = require('path')

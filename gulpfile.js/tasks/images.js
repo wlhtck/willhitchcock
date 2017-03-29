@@ -19,7 +19,7 @@ var imagesTask = function() {
     .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(gulpif(global.production, imagemin([imageminGuetzli()]))) // Optimize
     .pipe(gulp.dest(paths.dest))
-    .pipe(browserSync.stream())
+    .pipe(gulpif(!global.production, browserSync.stream()))
 }
 
 gulp.task('images', imagesTask)
