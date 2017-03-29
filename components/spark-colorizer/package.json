@@ -5,9 +5,8 @@
   "name": "GMDSUSSPT-70727-2016-Spark-Colorizer",
   "version": "1.0.0",
   "author": "MRM // McCann, Detroit Interactive",
-  "directory_source": "trunk/src",
-  "directory_build": "trunk/build",
-  "directory_deploy": "trunk/zipped",
+  "directory_source": "src",
+  "directory_build": "build",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-clean":      "~0.5.0",

@@ -5,9 +5,8 @@
   "name": "GMDSUSSPT-74909_Trailering-Guide",
   "version": "1.0.0",
   "author": "MRM // McCann, Detroit Interactive",
-  "directory_source": "trunk/src",
-  "directory_build": "trunk/build",
-  "directory_deploy": "trunk/zipped",
+  "directory_source": "src",
+  "directory_build": "build",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "~0.5.0",
