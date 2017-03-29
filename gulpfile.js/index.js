@@ -11,6 +11,10 @@
   when you run `gulp`.
 */
 
+if(process.env.NODE_ENV === 'production') {
+	global.production = true
+}
+
 var requireDir = require('require-dir')
 
 // Require all tasks in gulpfile.js/tasks, including subfolders
