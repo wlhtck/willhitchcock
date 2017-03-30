@@ -17,8 +17,15 @@
     },
 
     "components": {
-      "src": "components",
-      "dest": "components"
+      "src": "components/**/src",
+      "dest": "components",
+      "images": {
+        "src": "img",
+        "extensions": ["jpg", "png", "svg", "gif"]
+      },
+      "static": {
+        "src": ["video", "fonts"]
+      }
     },
 
     "browserify": {
