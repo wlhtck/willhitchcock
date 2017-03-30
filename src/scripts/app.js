@@ -1,14 +1,14 @@
-global.jQuery = require('jquery');
-global.$      = require('jquery');
+// global.jQuery = require('jquery');
+// global.$      = require('jquery');
 var angular   = require('angular');
 
 require('angular-route');
 
 require('./controllers');
 require('./enterHeight');
-require('./cards-hover');
+require('./cardsToggle');
 
-var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight', 'cardHover']);
+var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight', 'cardToggle']);
 
 willHitchcock.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
