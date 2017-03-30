@@ -21,8 +21,8 @@
                     <span class="title-text">{{resume.experience.header}}</span>
                 </span>
             </h5>
-            <div class="card wh-bounceInUp" card-hover ng-repeat="item in resume.experience.list">
-                <div class="hover-activator activator card-image waves-effect waves-light full-width">
+            <div class="card wh-bounceInUp" card-toggle ng-repeat="item in resume.experience.list">
+                <div class="card-image waves-effect waves-light full-width">
                     <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
                 </div>
                 <div class="card-content">
@@ -33,8 +33,8 @@
                         <div class="col m9 s12 valign">
                             <div class="card-title">
                                 {{item.employer}}
-                                <i class="material-icons right hide-on-large-only">more_vert</i></span>
                                 <small class="avoid-wrap thin">{{item.location}}</small>
+                                <i class="activator material-icons right">more_vert</i>
                             </div>
                             <h6>{{item.title}}</h6>
                             <h6>{{item.startDate}} - {{item.endDate || "Present"}}</h6>
@@ -44,7 +44,7 @@
                 <div class="card-reveal flow-text">
                     <span class="card-title">
                         {{item.employer}}
-                        <i class="material-icons right hide-on-large-only">close</i>
+                        <i class="material-icons right activator">close</i>
                     </span>
                     <div class="valign-wrapper">
                         <p class="valign">{{item.description}}</p>
