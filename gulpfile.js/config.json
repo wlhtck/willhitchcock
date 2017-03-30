@@ -36,7 +36,6 @@
       "sass": {
         "indentedSyntax": true,
         "includePaths": [
-          "bower_components",
           "node_modules"
         ]
       },
