@@ -4,7 +4,7 @@
   },
   "name": "GMDSUSSPT-70727-2016-Spark-Colorizer",
   "version": "1.0.0",
-  "author": "MRM // McCann, Detroit Interactive",
+  "author": "Will Hitchcock, MRM // McCann, Detroit Interactive",
   "directory_source": "src",
   "directory_build": "build",
   "devDependencies": {
