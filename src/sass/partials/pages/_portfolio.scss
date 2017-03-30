@@ -1,7 +1,7 @@
 .portfolio {
     .card {
         display: block;
-        transition: max-height ease .5s;
+        transition: max-height ease .5s, box-shadow .25s;
         max-height: 100vh;
         overflow: hidden;
 

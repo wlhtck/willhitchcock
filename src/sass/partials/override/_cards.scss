@@ -1,6 +1,6 @@
 .card {
 	overflow:hidden;
-	&:hover, &.active {
+	&.active {
 		.card-reveal {
 			top:0;
 		}
