@@ -55,7 +55,8 @@
   "main": "/build/prod/service/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/gulp/bin/gulp.js production && node_modules/gulp/bin/gulp.js server",
+    "postInstall": "node_modules/gulp/bin/gulp.js production",
+    "start": "node_modules/gulp/bin/gulp.js server",
     "dev": "gulp"
   },
   "engines": {
