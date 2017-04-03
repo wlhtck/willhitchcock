@@ -17,7 +17,7 @@
 @import "materialize-css/sass/components/icons-material-design";
 @import "materialize-css/sass/components/grid";
 @import "materialize-css/sass/components/navbar";
-@import "materialize-css/sass/components/roboto";
+// @import "materialize-css/sass/components/roboto";
 @import "materialize-css/sass/components/typography";
 @import "materialize-css/sass/components/cards";
 //@import "materialize-css/sass/components/toast";
@@ -41,9 +41,11 @@
 //@import "materialize-css/sass/components/date_picker/default.time";
 //@import 'mont-css-awesome/scss/font-awesome.scss';
 
-@import 'partials/override/cards'
+@import	'partials/fonts'
 
-@import 'partials/animations/variables'
+@import 'partials/override/cards';
+
+@import 'partials/animations/variables';
 
 @import 'partials/animations/slideInRight';
 @import 'partials/animations/slideOutLeft';
