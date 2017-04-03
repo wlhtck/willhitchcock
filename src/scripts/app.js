@@ -1,4 +1,5 @@
 // include jQuery globally, it is used by components
+// jQuery is NOT needed for the general site
 global.jQuery = require('jquery');
 global.$      = require('jquery');
 
