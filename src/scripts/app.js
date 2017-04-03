@@ -1,7 +1,11 @@
+// include jQuery globally, it is used by components
 global.jQuery = require('jquery');
 global.$      = require('jquery');
+
+// include agular core
 var angular   = require('angular');
 
+// include angular modules the angular way
 require('angular-route');
 
 require('./controllers');
