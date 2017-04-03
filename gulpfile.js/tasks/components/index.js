@@ -5,11 +5,8 @@ var gulp         = require('gulp')
 var gutil        = require('gulp-util')
 var gulpSequence = require('gulp-sequence')
 
-// If you are familiar with Rails, this task the equivalent of `rake assets:precompile`
 var compTask = function(cb) {
   gulpSequence(
-    // 1) Add md5 hashes to assets referenced by CSS and JS files
-
     // Assets 
         //  task img (done)
     'comp-images',
@@ -17,9 +14,12 @@ var compTask = function(cb) {
     'comp-static',
     // Code
         //  process-html
+    'comp-html',
         //  sass
+    'comp-css',
         //  css-nano
         //  uglify
+    'comp-js',
     // Rev
         //  use existing tasks (hopefully)
 

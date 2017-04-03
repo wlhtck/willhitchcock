@@ -25,6 +25,18 @@
       },
       "static": {
         "src": ["video", "fonts"]
+      },
+      "css": {
+        "src": ["sass", "css"],
+        "extensions": ["sass", "scss", "css"]
+      },
+      "html": {
+        "src": "/",
+        "extensions": ["html", "htm"]
+      },
+      "js": {
+        "src": "js",
+        "extensions": ["js", "json"]
       }
     },
 
@@ -71,6 +83,11 @@
       "src": "fonts",
       "dest": "fonts",
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+    "svgSprite": {
+      "src": "icons",
+      "dest": "img",
+      "extensions": ["svg"]
     },
 
     "production" : {
