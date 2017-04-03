@@ -7,7 +7,7 @@
     </h5>
     <div class="relative">
         <div class="form-block" ng-show="!contactForm.$submitted">
-            <form name="contactForm" ng-submit="contactForm.$valid ? sendEmail() : contactForm.$submitted = false" novalidate>
+            <form name="contactForm" ng-submit="contactForm.$valid ? sendEmail() : contactForm.$submitted = false" novalidate form-state>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">person</i>
                     <input id="name" name="name" type="text" ng-required="true" ng-model="msg.name">
