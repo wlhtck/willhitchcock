@@ -1,7 +1,7 @@
 <div ng-controller="FooterCtrl">
     <div class="container center">
         <a ng-repeat="item in footer.networks" ng-href="{{item.href}}" target="_blank" class="social-links">
-            <i class="white-text fa fa-3x" ng-class="item.icon"></i>
+            <svg viewBox="0 0 1 1"><use xlink:href='{{item.icon}}' /></use></svg>
         </a>
     </div>
     <div class="footer-copyright">
