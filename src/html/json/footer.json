@@ -2,10 +2,10 @@
     "copyright": "William Hitchcock. All Rights Reserved.",
     "header": "Social",
     "networks": [{
-    	"icon": "fa-github",
+    	"icon": "/img/icons.svg#github",
     	"href": "https://github.com/will-hitchcock/"
     }, {
-    	"icon": "fa-linkedin",
+    	"icon": "/img/icons.svg#linkedin",
     	"href": "https://www.linkedin.com/in/willhitchcock"
 
     }]
