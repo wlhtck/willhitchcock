@@ -10,10 +10,11 @@ gulp.task('rev-update-references', function(){
   	src: path.join(config.root.dest,'**/**.{css,js}')
   }
   
+  console.log(paths.src)
   return gulp.src(paths.src)
     .pipe(revReplace({
     	manifest: manifest,
-    	replaceInExtensions: ['.js', '.css', '.json']
+    	replaceInExtensions: ['.js', '.css']
     }))
     .pipe(gulp.dest(config.root.dest))
 })

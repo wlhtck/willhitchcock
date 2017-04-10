@@ -17,7 +17,7 @@ var paths = {
 var imagesTask = function() {
   return gulp.src([paths.src, '*!README.md'])
     .pipe(changed(paths.dest)) // Ignore unchanged files
-    .pipe(gulpif(global.production, imagemin([imageminGuetzli()]))) // Optimize
+    .pipe(gulpif(global.production, imagemin([imageminGuetzli({quality: 85})]))) // Optimize
     .pipe(gulp.dest(paths.dest))
     .pipe(gulpif(!global.production, browserSync.stream()))
 }

@@ -1,20 +1,3 @@
-#content { 
-  width: 100%;
-  height: 100%;
-
-  iframe {
-    width: 100%;
-    height: 100%;    
-  }
-
-  .juneBug {
-  	position:absolute;
-  	top:10%;
-  	bottom:0px;
-  }
-
-}
-
 #traileringGuide {
     width: 980px;
 
@@ -24,7 +7,7 @@
     #top {
         width: 980px;
         height: 340px;
-        background-image: url(../img/bg.jpg);
+        background-image: url(/components/trailering-guide/img/bg.jpg);
         position: relative;
         .truck {
             display: none;
@@ -32,33 +15,33 @@
             right: 0;
             bottom: 0;
             &#welcome {
-                background-image: url(../img/welcome.png);
+                background-image: url(/components/trailering-guide/img/welcome.png);
                 width: 980px;
                 height: 340px;
             }
             &#truck1 {
-                background-image: url(../img/Canyon_Speedboat.png);
+                background-image: url(/components/trailering-guide/img/Canyon_Speedboat.png);
                 width: 892px;
                 height: 236px;
                 bottom: 10px;
             }
             &#truck2 {
-                background-image: url(../img/1500_Airstream.png);
+                background-image: url(/components/trailering-guide/img/1500_Airstream.png);
                 width: 930px;
                 height: 278px;
             }
             &#truck3 {
-                background-image: url(../img/2500_Sailboat.png);
+                background-image: url(/components/trailering-guide/img/2500_Sailboat.png);
                 width: 945px;
                 height: 294px;
             }
             &#truck4 {
-                background-image: url(../img/2500_RV.png);
+                background-image: url(/components/trailering-guide/img/2500_RV.png);
                 width: 945px;
                 height: 293px;
             }
             &#truck5 {
-                background-image: url(../img/3500_HorseTrailer.png);
+                background-image: url(/components/trailering-guide/img/3500_HorseTrailer.png);
                 width: 951px;
                 height: 272px;
             }
@@ -72,7 +55,7 @@
     }
     #bottom {
         #nav {
-            background-image: url(../img/nav-bg.jpg);
+            background-image: url(/components/trailering-guide/img/nav-bg.jpg);
             padding: 22px 10px;
             position: relative;
             #reset {
@@ -118,7 +101,7 @@
                 }
                 #button1.active,
                 #button1:hover {
-                    background-image: url(../img/boat.jpg);
+                    background-image: url(/components/trailering-guide/img/boat.jpg);
                 }
                 #button1.active::after,
                 #button1:hover::after {
@@ -126,7 +109,7 @@
                 }
                 #button2.active,
                 #button2:hover {
-                    background-image: url(../img/airstream.jpg);
+                    background-image: url(/components/trailering-guide/img/airstream.jpg);
                 }
                 #button2.active::after,
                 #button2:hover::after {
@@ -134,7 +117,7 @@
                 }
                 #button3.active,
                 #button3:hover {
-                    background-image: url(../img/sailboat.jpg);
+                    background-image: url(/components/trailering-guide/img/sailboat.jpg);
                 }
                 #button3.active::after,
                 #button3:hover::after {
@@ -142,7 +125,7 @@
                 }
                 #button4.active,
                 #button4:hover {
-                    background-image: url(../img/rv.jpg);
+                    background-image: url(/components/trailering-guide/img/rv.jpg);
                 }
                 #button4.active::after,
                 #button4:hover::after {
@@ -150,7 +133,7 @@
                 }
                 #button5.active,
                 #button5:hover {
-                    background-image: url(../img/trailer.jpg);
+                    background-image: url(/components/trailering-guide/img/trailer.jpg);
                 }
                 #button5.active::after,
                 #button5:hover::after {

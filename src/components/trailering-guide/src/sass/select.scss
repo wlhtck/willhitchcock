@@ -5,7 +5,7 @@
 $background: #e74c3c;
 $select-color: #000;
 $option-color: #fff;
-$option-background: url(../img/select.jpg);
+$option-background: url(/components/trailering-guide/img/select.jpg);
 $select-width: 386px;
 $select-height: 42px;
 #traileringGuide {
@@ -82,7 +82,7 @@ $select-height: 42px;
             filter: none;
         }
         &:after {
-            content: url(../img/chev.png);
+            content: url(/components/trailering-guide/img/chev.png);
             position: absolute;
             top: 15px;
             right: 15px;

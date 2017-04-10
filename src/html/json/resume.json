@@ -37,56 +37,55 @@
         "header": "Skills",
         "list":[{
             "name": "HTML5",
-            "logo": "img/logos/HTML5.svg",
-            "level": "75"
+            "logo": "img/logos/HTML5.svg"
         }, {
             "name": "CSS3",
-            "logo": "img/logos/CSS3.svg",
-            "level": "70"
+            "logo": "img/logos/CSS3.svg"
         }, {
             "name": "JavaScript",
-            "logo": "img/logos/javascript.svg",
-            "level": "85"
+            "logo": "img/logos/javascript.svg"
         }, {
             "name": "jQuery",
-            "logo": "img/logos/jquery.svg",
-            "level": "95"
+            "logo": "img/logos/jquery.svg"
         }, {
             "name": "AngularJS",
-            "logo": "img/logos/angular.svg",
-            "level": "70"
+            "logo": "img/logos/angular.svg"
+        }, {
+            "name": "ReactJS",
+            "logo": "img/logos/react.svg"
+        }, {
+            "name": "Redux",
+            "logo": "img/logos/redux.svg"
         }, {
             "name": "Sass",
-            "logo": "img/logos/sass.svg",
-            "level": "65"
+            "logo": "img/logos/sass.svg"
         }, {
             "name": "Less",
-            "logo": "img/logos/less.svg",
-            "level": "75"
+            "logo": "img/logos/less.svg"
         }, {
             "name": "GruntJS",
-            "logo": "img/logos/grunt.svg",
-            "level": "65"
+            "logo": "img/logos/grunt.svg"
         }, {
             "name": "GulpJS",
-            "logo": "img/logos/gulp.svg",
-            "level": "70"
+            "logo": "img/logos/gulp.svg"
         }, {
             "name": "NodeJS",
-            "logo": "img/logos/node.svg",
-            "level": "50"
+            "logo": "img/logos/node.svg"
+        }, {
+            "name": "npm",
+            "logo": "img/logos/npm.svg"
         }, {
             "name": "Browserify",
-            "logo": "img/logos/browserify.svg",
-            "level": "65"
+            "logo": "img/logos/browserify.svg"
+        }, {
+            "name": "Webpack",
+            "logo": "img/logos/webpack.svg"
         }, {
             "name": "Bower",
-            "logo": "img/logos/bower.svg",
-            "level": "80"
+            "logo": "img/logos/bower.svg"
         }, {
             "name": "Git",
-            "logo": "img/logos/git.svg",
-            "level": "70"
+            "logo": "img/logos/git.svg"
         }]
     },
     "download":{

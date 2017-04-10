@@ -59,16 +59,12 @@
                     <span class="title-text">{{resume.skills.header}}</span>
                 </span>
             </h5>
-            <div class="card-panel skill wh-bounceInUp" ng-repeat="item in resume.skills.list">
-                <div class="row no-margin valign-wrapper">
-                    <div class="col s2 m4">
-                        <img ng-src="{{item.logo}}" alt="" class="img-thumb valign center-block responsive-img">
-                    </div>
-                    <div class="col s10 m8">
-                        <h6 class="center">{{item.name}}</h6>
-                        <div class="progress">
-                            <div class="determinate" ng-style="{width: item.level+'%', height: '10px'}"></div>
-                        </div>
+            <div class="row">
+                    <div class="col s6" ng-repeat="item in resume.skills.list">
+                        <div class="card-panel skill wh-bounceInUp">
+                            <img ng-src="{{item.logo}}" alt="" class="img-thumb center-block responsive-img">
+                            <h6 class="center">{{item.name}}</h6>
+                        </div>  
                     </div>
                 </div>
             </div>

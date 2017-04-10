@@ -12,7 +12,7 @@
 	background-position: center;
 	height:450px;
 	transition: all ease 0.5s;
-	background-image: url('../img/2016-chevrolet-spark-lime-compact-car-mo-design.jpg')
+	background-image: url('/components/spark-colorizer/img/2016-chevrolet-spark-lime-compact-car-mo-design.jpg')
 }
 
 #sparkColorizer #nav {
@@ -56,92 +56,92 @@
 	margin-top: 0;
 }
 #sparkColorizer #black-granite .nav-button {
-	background-image:url('../img/black-granite-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/black-granite-sm.jpg');
 }
 #sparkColorizer #black-granite .nav-button:hover, #sparkColorizer #black-granite.active .nav-button {
-	background-image:url('../img/black-granite.jpg');
+	background-image:url('/components/spark-colorizer/img/black-granite.jpg');
 }
 #sparkColorizer #lime.active .nav-tag {
-	background-image: url('../img/lime-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/lime-tag.jpg');
 }
 #sparkColorizer #electric-blue .nav-button {
-	background-image:url('../img/electric-blue-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/electric-blue-sm.jpg');
 }
 #sparkColorizer #electric-blue .nav-button:hover, #sparkColorizer #electric-blue.active .nav-button {
-	background-image:url('../img/electric-blue.jpg');
+	background-image:url('/components/spark-colorizer/img/electric-blue.jpg');
 }
 #sparkColorizer #black-granite.active .nav-tag {
-	background-image: url('../img/black-granite-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/black-granite-tag.jpg');
 }
 #sparkColorizer #kalamata .nav-button {
-	background-image:url('../img/kalamata-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/kalamata-sm.jpg');
 }
 #sparkColorizer #kalamata .nav-button:hover, #sparkColorizer #kalamata.active .nav-button {
-	background-image:url('../img/kalamata.jpg');
+	background-image:url('/components/spark-colorizer/img/kalamata.jpg');
 }
 #sparkColorizer #toasted-marshmallow.active .nav-tag {
-	background-image: url('../img/toasted-marshmallow-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/toasted-marshmallow-tag.jpg');
 }
 #sparkColorizer #lime .nav-button {
-	background-image:url('../img/lime-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/lime-sm.jpg');
 }
 #sparkColorizer #lime .nav-button:hover, #sparkColorizer #lime.active .nav-button {
-	background-image:url('../img/lime.jpg');
+	background-image:url('/components/spark-colorizer/img/lime.jpg');
 }
 #sparkColorizer #electric-blue.active .nav-tag {
-	background-image: url('../img/electric-blue-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/electric-blue-tag.jpg');
 }
 #sparkColorizer #salsa .nav-button {
-	background-image:url('../img/salsa-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/salsa-sm.jpg');
 }
 #sparkColorizer #salsa .nav-button:hover, #sparkColorizer #salsa.active .nav-button {
-	background-image:url('../img/salsa.jpg');
+	background-image:url('/components/spark-colorizer/img/salsa.jpg');
 }
 #sparkColorizer #kalamata.active .nav-tag {
-	background-image: url('../img/kalamata-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/kalamata-tag.jpg');
 }
 #sparkColorizer #silver-ice .nav-button {
-	background-image:url('../img/silver-ice-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/silver-ice-sm.jpg');
 }
 #sparkColorizer #silver-ice .nav-button:hover, #sparkColorizer #silver-ice.active .nav-button {
-	background-image:url('../img/silver-ice.jpg');
+	background-image:url('/components/spark-colorizer/img/silver-ice.jpg');
 }
 #sparkColorizer #summit-white.active .nav-tag {
-	background-image: url('../img/summit-white-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/summit-white-tag.jpg');
 }
 #sparkColorizer #splash .nav-button {
-	background-image:url('../img/splash-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/splash-sm.jpg');
 }
 #sparkColorizer #splash .nav-button:hover, #sparkColorizer #splash.active .nav-button {
-	background-image:url('../img/splash.jpg');
+	background-image:url('/components/spark-colorizer/img/splash.jpg');
 }
 #sparkColorizer #splash.active .nav-tag {
-	background-image: url('../img/splash-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/splash-tag.jpg');
 }
 #sparkColorizer #summit-white .nav-button {
-	background-image:url('../img/summit-white-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/summit-white-sm.jpg');
 }
 #sparkColorizer #summit-white .nav-button:hover, #sparkColorizer #summit-white.active .nav-button {
-	background-image:url('../img/summit-white.jpg');
+	background-image:url('/components/spark-colorizer/img/summit-white.jpg');
 }
 #sparkColorizer #silver-ice.active .nav-tag {
-	background-image: url('../img/silver-ice-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/silver-ice-tag.jpg');
 }
 #sparkColorizer #titanium .nav-button {
-	background-image:url('../img/titanium-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/titanium-sm.jpg');
 }
 #sparkColorizer #titanium .nav-button:hover, #sparkColorizer #titanium.active .nav-button {
-	background-image:url('../img/titanium.jpg');
+	background-image:url('/components/spark-colorizer/img/titanium.jpg');
 }
 #sparkColorizer #titanium.active .nav-tag {
-	background-image: url('../img/titanium-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/titanium-tag.jpg');
 }
 #sparkColorizer #toasted-marshmallow .nav-button{
-	background-image:url('../img/toasted-marshmallow-sm.jpg');
+	background-image:url('/components/spark-colorizer/img/toasted-marshmallow-sm.jpg');
 }
 #sparkColorizer #toasted-marshmallow .nav-button:hover, #sparkColorizer #toasted-marshmallow.active .nav-button {
-	background-image:url('../img/toasted-marshmallow.jpg');
+	background-image:url('/components/spark-colorizer/img/toasted-marshmallow.jpg');
 }
 #sparkColorizer #salsa.active .nav-tag {
-	background-image: url('../img/salsa-tag.jpg');
+	background-image: url('/components/spark-colorizer/img/salsa-tag.jpg');
 }
