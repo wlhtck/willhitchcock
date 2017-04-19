@@ -19,10 +19,14 @@ angular.module('enterHeight', [])
     //TODO: Add debounce logic to this to prevent this event firing many times per animation sequence
     timeoutId = $interval(function() {
       var height = 0;
-  		element.children('.ng-enter').each(function() {
-  			height = $(this).height();
-  			element.css('min-height', height);
-      });
+      var children = element.children()
+
+      for (var i = children.length - 1; i >= 0; i--) {
+        if(angular.element(children[i]).hasClass('ng-enter')) {
+          height = children[i].offsetHeight
+          element.css('min-height', height + 'px');
+        }
+      }
     }, 100);
   }
 

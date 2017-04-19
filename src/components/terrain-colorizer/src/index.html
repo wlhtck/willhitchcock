@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<!-- build:remove -->
+		<!-- REMOVE BELOW BEFORE DELIVERY. THESE ARE FOR REFERNCE AND DEVELOPMENT ONLY AND ARE INCLUDED IN THE HEAD OF EVERY PAGE AUTOMATICALLY  -->		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.gmc.com/static/cms/gmc2012/css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="http://www.gmc.com/static/cms/gmc2012/css/t_06.css"/>
+		<link rel="stylesheet" type="text/css" href="http://www.gmc.com/static/additional/gmc2012/css/zipcodepopup.css"/>
+		<!--[if IE 8]>
+			<link rel="stylesheet" type="text/css" href="http://www.chevrolet.com/static/cms/chevrolet2013/css/main-ie8.css" />
+			<![endif]-->
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="http://www.chevrolet.com/static/cms/chevrolet2013/css/main-ie7.css" />
+			<![endif]-->		
+		<!--[if IE 6]>
+			<link rel="stylesheet" type="text/css" href="http://www.chevrolet.com/static/cms/chevrolet2013/css/main-ie6.css" />
+		<![endif]-->	
+		<script src="http://www.chevrolet.com/static/global/js/cookiemethods.js" type="text/javascript"></script>
+		<script src="http://www.chevrolet.com/static/cms/chevrolet2013/js/head.js" type="text/javascript"></script>
+		<!-- END REMOVE BEFORE DELIVERY -->
+		<!-- /build -->
+
+		<!-- Include all necessary css and scripts with relative paths here.  The html/head/body tags will be reformatted and stripped automatically.  -->
+		<link rel="stylesheet" href="components/terrain-colorizer/css/main.css" type="text/css" media="screen" />
+		<script src="components/terrain-colorizer/js/video-colorizer.js"></script>
+		<script src="components/terrain-colorizer/js/draggabilly.pkgd.min.js"></script>
+		<script src="components/terrain-colorizer/js/slick.min.js"></script>
+		<script src="components/terrain-colorizer/js/jquery.waypoints.min.js"></script>
+		<!-- END Include all necessary css and scripts with relative paths here. -->
+		
+	</head>
+	<body>
+		<div id="video-colorizer">
+			<!-- put all necessary HTML here.  Always use relative paths to images/js/css referenced in this component. Be sure to change the id of this div -->
+			<div class="video-container arrow-style-1">
+            	<video data-index="0" src="components/terrain-colorizer/video/color-0.mp4" class="video_player active" type="video/mp4" preload="auto" muted></video>
+				<video data-index="1" src="components/terrain-colorizer/video/color-1.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="2" src="components/terrain-colorizer/video/color-2.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="3" src="components/terrain-colorizer/video/color-3.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="4" src="components/terrain-colorizer/video/color-4.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="5" src="components/terrain-colorizer/video/color-5.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="6" src="components/terrain-colorizer/video/color-6.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+            	<video data-index="7" src="components/terrain-colorizer/video/color-7.mp4" class="video_player" type="video/mp4" preload="auto" muted></video>
+
+	        	<span class="mmScrollBtn prev"></span>
+	        	<span class="mmScrollBtn next"></span>
+				<div class="controls dragable"></div>
+	        	
+			</div>
+			<div class="carousel-container hide-custom">
+
+				<div class="carousel-custom active" data-index="0">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG1-1.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG2-1.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG3-1.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG4-1.jpg">            
+	            </div>
+
+	            <div class="carousel-custom" data-index="1">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG1.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG2.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG3.jpg">
+					<img class="carousel-img" src="components/terrain-colorizer/img/IMG4.jpg">            
+	            </div>
+			</div>
+
+	        <div class="nav">
+
+	        	<div class="toggle">
+	        		<button class="exterior active">EXTERIOR</button>
+	        		<div class="divider"></div>
+	        		<button class="interior">INTERIOR</button>
+	            </div>
+
+
+
+	            <div class="ext-colors">
+
+	            	<div class="color-wrapper">
+		        		<button class="color-chip active" id="ext-chip-0" data-index="0"></button>
+		        		<div class="tool-tip">Ebony Twilight Metallic</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-1" data-index="1"></button>
+		        		<div class="tool-tip">Red Quartz Tintcoat</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-2" data-index="2"></button>
+		        		<div class="tool-tip">Quicksilver Metallic</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-3" data-index="3"></button>
+		        		<div class="tool-tip">Summit White</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-4" data-index="4"></button>
+		        		<div class="tool-tip">Graphite Gray Metallic</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-5" data-index="5"></button>
+		        		<div class="tool-tip">Mineral Metallic</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-6" data-index="6"></button>
+		        		<div class="tool-tip">Blue Steel Metallic</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+		        		<button class="color-chip" id="ext-chip-7" data-index="7"></button>
+		        		<div class="tool-tip">Satin Steel Gray Metallic</div>
+		        	</div>
+
+
+	            </div>
+
+	            <div class="int-colors hide-custom">
+
+		        	<div class="color-wrapper">
+			        	<button class="color-chip active" id="int-chip-0" data-index="0"></button>
+						<div class="tool-tip" data-index="0">Jet Black</div>
+		        	</div>
+
+		        	<div class="color-wrapper">
+			        	<button class="color-chip" id="int-chip-1" data-index="1"></button>
+			        	<div class="tool-tip" data-index="1">Light Platinum</div>
+		        	</div>
+	            </div>
+
+	            <!--
+	            <div class="toggle-trim">
+	            	<span class="denali">DENALI</span>
+	            </div>
+	            -->
+	        </div>
+		</div>
+	<!-- build:remove -->
+    <!-- Grunt script for live reload -->
+    <!--<script src="http://localhost:35729/livereload.js"></script>-->
+    <!-- /build -->
+
+	</body>
+</html>

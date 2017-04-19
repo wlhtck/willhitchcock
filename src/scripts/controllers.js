@@ -1,4 +1,9 @@
-var pageCtrls = angular.module('pageCtrl', ['ngRoute', 'angular-inview', 'ngAnimate', 'smoothScroll']);
+var ngRoute        = require('angular-route');
+var ngInView       = require('angular-inview');
+var ngAnimate      = require('angular-animate');
+var ngSmoothScroll = require('ng-smooth-scroll');
+
+var pageCtrls      = angular.module('pageCtrl', ['ngRoute', 'angular-inview', 'ngAnimate', 'smoothScroll']);
 
 pageCtrls
     .controller('HeadCtrl', ['$scope', '$http', function($scope, $http) {
@@ -100,3 +105,5 @@ pageCtrls
             $scope.footer = resp.data;
         });
     }]);
+
+// module.exports = pageCtrls;

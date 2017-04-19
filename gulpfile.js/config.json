@@ -1,0 +1,97 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "server": {
+        "baseDir": "dist"
+      }
+    },
+
+    "static": {
+      "src": "misc",
+      "dest": "misc"
+    },
+
+    "components": {
+      "src": "components/**/src",
+      "dest": "components",
+      "images": {
+        "src": "img",
+        "extensions": ["jpg", "jpeg"]
+      },
+      "static": {
+        "src": ["video", "fonts"]
+      },
+      "css": {
+        "src": ["sass", "css"],
+        "extensions": ["sass", "scss", "css"]
+      },
+      "html": {
+        "src": "/",
+        "extensions": ["html", "htm"]
+      },
+      "js": {
+        "src": "js",
+        "extensions": ["js", "json"]
+      }
+    },
+
+    "browserify": {
+      "src": "scripts",
+      "dest": "js",
+      "app": "./app.js",
+      "extensions": ["js", "json"]
+    },
+    "css": {
+      "src": "sass",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": ["last 3 versions"]
+      },
+      "sass": {
+        "indentedSyntax": true,
+        "includePaths": [
+          "node_modules"
+        ]
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+    "html": {
+      "src": "html",
+      "dest": "./",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "htm", "json"]
+    },
+    "json": {
+      "src": "html/json",
+      "dest": "json",
+      "extensions": ["json", "js"]
+    },
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+    "svgSprite": {
+      "src": "icons",
+      "dest": "img",
+      "extensions": ["svg"]
+    },
+
+    "production" : {
+      "rev": true
+    }
+  }
+}

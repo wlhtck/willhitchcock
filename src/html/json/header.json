@@ -1,0 +1,19 @@
+{
+    "image": {
+        "url":"img/profile.jpg",
+        "href": "#!/"
+    },
+    "nav": [{
+        "name": "Portfolio",
+        "href": "#!/",
+        "icon": "collections"
+    }, {
+        "name": "Resume",
+        "href": "#!/resume",
+        "icon": "school"
+    }, {
+        "name": "Contact",
+        "href": "#!/contact",
+        "icon": "email"
+    }]
+}

@@ -1,0 +1,97 @@
+{
+
+    "experience": {
+        "icon":"work",
+        "header": "Experience",
+        "list": [{
+            "employer": "MRM // McCANN",
+            "title": "Interactive Developer",
+            "startDate": "Oct 2015",
+            "graphic": "img/graphics/mrm-graphic.jpg",
+            "location": "Birmingham, MI",
+            "logo": "img/logos/mrm.png",
+            "description": "Working at MRM has given me an incredible opportunity for professional development. I have added onto my professional skillset immensely by engaging in advanced modern development techniques. I have had the opportunity to work on projects for well known brands such as GMC, Chevrolet and Coca-Cola."
+
+        }, {
+            "employer": "CareTech Solutions",
+            "title": "Web Application Developer",
+            "startDate": "Jan 2013",
+            "endDate": "Oct 2015",
+            "graphic": "img/graphics/caretech-graphic.jpg",
+            "location": "Troy, MI",
+            "logo": "img/logos/caretech.png",
+            "description": "As a part of CareTech's Self-Service team, I was responsible for developing and maintaining digital service portals for numerous clients around the country. I worked with my team to develop solutions to streamline business processes using HTML, CSS, JavaScript, jQuery, JSP and AJAX."
+        }, {
+            "employer": "Baker College",
+            "title": "Bachelor of Computer Science",
+            "startDate": "Sep 2008",
+            "endDate": "Jul 2013",
+            "graphic": "img/graphics/baker-graphic.jpg",
+            "location": "Clinton Township, MI",
+            "logo": "img/logos/baker.png",
+            "description": "At Baker College I studied computer science. During this time I was able to learn and apply fundamental programming principals through their hands-on approach."
+        }]
+    },
+    "skills": {
+        "icon":"code",
+        "header": "Skills",
+        "list":[{
+            "name": "HTML5",
+            "logo": "img/logos/HTML5.svg"
+        }, {
+            "name": "CSS3",
+            "logo": "img/logos/CSS3.svg"
+        }, {
+            "name": "JavaScript",
+            "logo": "img/logos/javascript.svg"
+        }, {
+            "name": "jQuery",
+            "logo": "img/logos/jquery.svg"
+        }, {
+            "name": "AngularJS",
+            "logo": "img/logos/angular.svg"
+        }, {
+            "name": "ReactJS",
+            "logo": "img/logos/react.svg"
+        }, {
+            "name": "Redux",
+            "logo": "img/logos/redux.svg"
+        }, {
+            "name": "Sass",
+            "logo": "img/logos/sass.svg"
+        }, {
+            "name": "Less",
+            "logo": "img/logos/less.svg"
+        }, {
+            "name": "GruntJS",
+            "logo": "img/logos/grunt.svg"
+        }, {
+            "name": "GulpJS",
+            "logo": "img/logos/gulp.svg"
+        }, {
+            "name": "NodeJS",
+            "logo": "img/logos/node.svg"
+        }, {
+            "name": "npm",
+            "logo": "img/logos/npm.svg"
+        }, {
+            "name": "Browserify",
+            "logo": "img/logos/browserify.svg"
+        }, {
+            "name": "Webpack",
+            "logo": "img/logos/webpack.svg"
+        }, {
+            "name": "Bower",
+            "logo": "img/logos/bower.svg"
+        }, {
+            "name": "Git",
+            "logo": "img/logos/git.svg"
+        }]
+    },
+    "download":{
+        "header": "Paper",
+        "icon": "description",
+        "text": "If you absolutely must have a paper resume, you can download it here:",
+        "href": "/misc/WillHitchcockResume.pdf"
+    }
+}

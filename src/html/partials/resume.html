@@ -1,0 +1,73 @@
+<div class="container resume" id="resume">
+    <div class="row">
+        <div class="col s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left ng-binding">{{resume.download.icon}}</i>
+                    <span class="title-text ng-binding">{{resume.download.header}}</span>
+                </span>
+            </h5>
+            <p class="flow-text center">{{resume.download.text}}</p>
+            <div class="center-align">
+                <a class="waves-effect waves-light btn" target="_blank" ng-href="{{resume.download.href}}" ><i class="material-icons left">file_download</i>Download</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m8 s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left">{{resume.experience.icon}}</i>
+                    <span class="title-text">{{resume.experience.header}}</span>
+                </span>
+            </h5>
+            <div class="card wh-bounceInUp" card-toggle ng-repeat="item in resume.experience.list">
+                <div class="card-image waves-effect waves-light full-width">
+                    <img class="activator" ng-src="{{item.graphic}}" alt="{{item.alt}}">
+                </div>
+                <div class="card-content">
+                    <div class="row no-margin valign-wrapper">
+                        <div class="col m3 hide-on-small-only">
+                            <img ng-src="{{item.logo}}" alt="" class="center-block responsive-img circle">
+                        </div>
+                        <div class="col m9 s12 valign">
+                            <div class="card-title">
+                                {{item.employer}}
+                                <small class="avoid-wrap thin">{{item.location}}</small>
+                                <i class="activator material-icons right">more_vert</i>
+                            </div>
+                            <h6>{{item.title}}</h6>
+                            <h6>{{item.startDate}} - {{item.endDate || "Present"}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-reveal flow-text">
+                    <span class="card-title">
+                        {{item.employer}}
+                        <i class="material-icons right activator">close</i>
+                    </span>
+                    <div class="valign-wrapper">
+                        <p class="valign">{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m4 s12">
+            <h5 class="section-title">
+                <span>
+                    <i class="material-icons left">{{resume.skills.icon}}</i>
+                    <span class="title-text">{{resume.skills.header}}</span>
+                </span>
+            </h5>
+            <div class="row">
+                    <div class="col s6" ng-repeat="item in resume.skills.list">
+                        <div class="card-panel skill wh-bounceInUp">
+                            <img ng-src="{{item.logo}}" alt="" class="img-thumb center-block responsive-img">
+                            <h6 class="center">{{item.name}}</h6>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

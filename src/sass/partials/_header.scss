@@ -6,7 +6,7 @@ header {
             position: absolute;
             height: 100%;
             width: 100%;
-            background-image: url(../img/header.png);
+            background-image: url(../img/header.jpg);
             background-repeat: no-repeat;
             background-attachment: local;
             background-position: center center;
@@ -37,6 +37,7 @@ header {
                     display: inline;
                 }
                 a {
+                    font-family: "Coming Soon", cursive;
                     font-size: 1.4rem;
                     display: inline-block;
                 }

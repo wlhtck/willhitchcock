@@ -1,4 +1,20 @@
-var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight']);
+// include jQuery globally, it is used by components
+// jQuery is NOT needed for the general site
+global.jQuery = require('jquery');
+global.$      = require('jquery');
+
+// include agular core
+var angular   = require('angular');
+
+// include angular modules the angular way
+require('angular-route');
+
+require('./controllers');
+require('./enterHeight');
+require('./cardsToggle');
+require('./formState');
+
+var willHitchcock = angular.module('willHitchcock', ['ngRoute', 'pageCtrl', 'enterHeight', 'cardToggle', 'formState']);
 
 willHitchcock.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
