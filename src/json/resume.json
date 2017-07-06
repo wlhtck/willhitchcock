@@ -4,13 +4,23 @@
         "icon":"work",
         "header": "Experience",
         "list": [{
+            "employer": "Ambassador",
+            "title": "Software Engineer",
+            "startDate": "Apr 2017",
+            "graphic": "img/graphics/ambassador-graphic.jpg",
+            "location": "Royal Oak, MI",
+            "logo": "img/logos/ambassador.png",
+            "description": "Ambaasdor is an exciting opportunity for me to work in an industry shaping start-up alongside leaders in modern web app development practices and procedures."
+
+        }, {
             "employer": "MRM // McCANN",
             "title": "Interactive Developer",
             "startDate": "Oct 2015",
+            "endDate": "Apr 2017",
             "graphic": "img/graphics/mrm-graphic.jpg",
             "location": "Birmingham, MI",
             "logo": "img/logos/mrm.png",
-            "description": "Working at MRM has given me an incredible opportunity for professional development. I have added onto my professional skillset immensely by engaging in advanced modern development techniques. I have had the opportunity to work on projects for well known brands such as GMC, Chevrolet and Coca-Cola."
+            "description": "While working on MRMs Interactive team I worked with the project management team as well as other development teams to implement sites for their various clients including Anheuser-Busch, GM, and Coca-Cola using JSP, Sass, Less and jQuery."
 
         }, {
             "employer": "CareTech Solutions",
@@ -52,6 +62,10 @@
             "logo": "img/logos/jquery.png",
             "level": "95"
         }, {
+            "name": "React",
+            "logo": "img/logos/react.png",
+            "level": "75"
+        }, {
             "name": "AngularJS",
             "logo": "img/logos/angular.png",
             "level": "70"
@@ -64,13 +78,17 @@
             "logo": "img/logos/less.png",
             "level": "75"
         }, {
+            "name": "Webpack",
+            "logo": "img/logos/webpack.svg",
+            "level": "60"
+        }, {
             "name": "GruntJS",
             "logo": "img/logos/grunt.svg",
             "level": "65"
         }, {
             "name": "GulpJS",
             "logo": "img/logos/gulp.png",
-            "level": "50"
+            "level": "70"
         }, {
             "name": "NodeJS",
             "logo": "img/logos/nodejs.png",
@@ -82,7 +100,7 @@
         }, {
             "name": "Git",
             "logo": "img/logos/git.png",
-            "level": "45"
+            "level": "70"
         }]
     },
     "download":{
