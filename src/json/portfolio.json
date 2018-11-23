@@ -31,10 +31,6 @@
             "header": "McCrea Deezer",
             "href":"http://www.mccreadeezer.com/"
         }, {
-            "graphic": "img/graphics/football-graphic.jpg",
-            "header": "Chevy FC",
-            "href":"http://chevyfc.com/"
-        }, {
             "graphic": "img/graphics/traction-graphic.jpg",
             "header": "Acadia Traction",
             "partial":"components/acadia-traction/index.html",

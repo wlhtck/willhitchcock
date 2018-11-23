@@ -4,13 +4,23 @@
         "icon":"work",
         "header": "Experience",
         "list": [{
+            "employer": "StockX",
+            "title": "Software Engineer",
+            "startDate": "Nov 2018",
+            "graphic": "img/graphics/stockx-graphic.jpg",
+            "location": "Detroit, MI",
+            "logo": "img/logos/stockx.jpg",
+            "description": "StockX is a 'stock market of things' - a consumer marketplace (like eBay) which connects buyers and sellers using the exact same methods as the New York Stock Exchange. "
+
+        }, {
             "employer": "Ambassador",
             "title": "Software Engineer",
             "startDate": "Apr 2017",
+            "endDate": "Nov 2018",
             "graphic": "img/graphics/ambassador-graphic.jpg",
             "location": "Royal Oak, MI",
             "logo": "img/logos/ambassador.png",
-            "description": "Ambaasdor is an exciting opportunity for me to work in an industry shaping start-up alongside leaders in modern web app development practices and procedures."
+            "description": "As a part of Ambassador's Engineering team I worked to develop and maintain a market leading referral marketing platform, including integrations designed to run on third party websites and administration tools designed for marketers to manager their programs."
 
         }, {
             "employer": "MRM // McCANN",
@@ -20,7 +30,7 @@
             "graphic": "img/graphics/mrm-graphic.jpg",
             "location": "Birmingham, MI",
             "logo": "img/logos/mrm.png",
-            "description": "While working on MRMs Interactive team I worked with the project management team as well as other development teams to implement sites for their various clients including Anheuser-Busch, GM, and Coca-Cola using JSP, Sass, Less and jQuery."
+            "description": "While working on MRM's Interactive team I worked with the project management team as well as other development teams to implement sites for their various clients including Anheuser-Busch, GM, and Coca-Cola using JSP, Sass, Less and jQuery."
 
         }, {
             "employer": "CareTech Solutions",
