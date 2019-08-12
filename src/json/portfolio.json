@@ -31,10 +31,6 @@
             "header": "McCrea Deezer",
             "href":"http://www.mccreadeezer.com/"
         }, {
-            "graphic": "img/graphics/football-graphic.jpg",
-            "header": "Chevy FC",
-            "href":"http://chevyfc.com/"
-        }, {
             "graphic": "img/graphics/traction-graphic.jpg",
             "header": "Acadia Traction",
             "partial":"components/acadia-traction/index.html",
@@ -49,7 +45,7 @@
         }, {
             "graphic": "img/graphics/coke-graphic.jpg",
             "header": "Coke Journey",
-            "href":"http://www.thecoca-colacompany.com/"
+            "href":"http://www.coca-colacompany.com/"
         }, {
             "graphic": "img/graphics/acadia-graphic.jpg",
             "header": "Acadia Reveal",
